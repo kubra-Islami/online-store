@@ -1,12 +1,51 @@
-# React + Vite
+# 🛍️ Online Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
+The **Online Store** is a simple e-commerce web application built with **React** and **Tailwind CSS**. It allows users to browse products, add them to a shopping cart, and manage their orders efficiently.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- 🛒 **Add to Cart** – Users can add products to their shopping cart.
+- 🗑 **Remove Items** – Items can be removed from the cart.
+- 📦 **Product List** – Displays a list of available products.
+- 🌍 **Responsive Design** – Optimized for different screen sizes using **Tailwind CSS**.
+- 🎨 **Modern UI** – Clean and attractive interface with hover animations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+- **Frontend:** React, Tailwind CSS
+- **State Management:** Zustand (for managing the cart state)
+- **Routing:** React Router
 
-## Expanding the ESLint configuration
+## 📷 Screenshots
+(Add screenshots here)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🏗 Installation & Setup
+
+1.Clone the repository:
+<br>
+``git clone https://github.com/yourusername/online-store.git
+``
+<br>
+<br>
+2.Navigate to the project directory:
+<br>
+``
+cd online-store
+``
+<br>
+<br>
+3.Install dependencies:
+<br>
+``
+npm install
+``
+<br>
+<br>
+4.Start the development server:
+<br>
+``
+npm run dev
+``
+<br>
+<br>
+<br>
+⭐ Enjoying this project? Show your support by giving it a star on GitHub! ⭐
