@@ -1,0 +1,29 @@
+/*@import "tailwindcss/preflight";*/
+/*@import "tailwindcss/components";*/
+/*@import "tailwindcss/utilities";*/
+
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+}
+
+.cart {
+  margin-top: 20px;
+}
