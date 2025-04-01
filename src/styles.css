@@ -1,29 +1,128 @@
-/*@import "tailwindcss/preflight";*/
-/*@import "tailwindcss/components";*/
-/*@import "tailwindcss/utilities";*/
-
-/*@tailwind base;*/
-/*@tailwind components;*/
-/*@tailwind utilities;*/
+@import "https://unpkg.com/leaflet@1.9.3/dist/leaflet.css";
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap";
+@import "tailwindcss";
 
 
+@layer components {
+  /*.input {*/
+  /*  @apply rounded-full border border-stone-200 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-yellow-400 md:px-6 md:py-3;*/
+  /*}*/
+
+  /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+  .loader {
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(theme(colors.stone.800) 0 0 );
+    background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+    background-size: 20% 50%;
+    animation: loading 1s infinite linear;
+  }
+
+  @keyframes loading {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+}
+/* CVS */
+/*colors theme*/
+
+/*["#9297c8", "#ee7036", "#f7cb9a", "#f6c1a7", "#b6c796"]*/
+
+
+
+/* These CSS variables are global, so they are available in all CSS modules */
+:root {
+  /*--color-brand--1: #ffb545;*/
+  /*--color-brand--2: #00c46a;*/
+
+  /*--color-dark--0: #242a2e;*/
+  /*--color-dark--1: #2d3439;*/
+  /*--color-dark--2: #42484d;*/
+  /*--color-light--1: #aaa;*/
+  /*--color-light--2: #ececec;*/
+  /*--color-light--3: #d6dee0;*/
+
+  --color-brand--1: #ee7036;
+  --color-brand--2: #9297c8;
+
+  --color-light--0: #f6c1a7;
+  --color-light--1: #f7cb9a;
+  --color-light--2: #b6c796;
+
+  --color-white: #ffffff;
+  --color-dark--1: #3a3939;
+  /*--color-light--2: #ececec;*/
+  /*--color-light--3: #d6dee0;*/
+}
+
+.-cus-color-brand--1{
+  color: var(--color-brand--1);
+}
+.-cus-color-brand--2{
+  color: var(--color-brand--2);
+}
+.-cus-color-light--0{
+  color: var(--color-light--0);
+}
+.-cus-color-light--1{
+  color: var(--color-light--1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
-.product-list {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+button:not([type="button"]){
+  padding: 5px 10px;
+  border-radius: 6px;
+  color:#000000;
+  font-weight: 500;
+  background-color: var(--color-brand--1);
 }
+button:hover{
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: var(--color-light--0);
+  cursor: pointer;
+}
+/*label {*/
+/*  font-size: 1.6rem;*/
+/*  font-weight: 600;*/
+/*}*/
 
-.product-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 200px;
-}
+/*input,*/
+/*textarea {*/
+/*  width: 100%;*/
+/*  padding: 0.8rem 1.2rem;*/
+/*  font-family: inherit;*/
+/*  font-size: 1.6rem;*/
+/*  border: none;*/
+/*  border-radius: 5px;*/
+/*  background-color: #d6dee0;*/
+/*  transition: all 0.2s;*/
+/*}*/
 
-.cart {
-  margin-top: 20px;
-}
+/*input:focus {*/
+/*  outline: none;*/
+/*  background-color: #fff;*/
+/*}*/
