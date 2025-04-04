@@ -18,21 +18,39 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
+    color: #3a4654;
     vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers*/
+@font-face {
+    font-family: 'Montserrat' !important;
+}
+
+/*HTML5 display-role reset for older browsers*/
 /*article, aside, details, figcaption, figure,*/
 /*footer, header, hgroup, menu, nav, section {*/
 /*    display: block;*/
 /*}*/
 
-body {
-    line-height: 1;
+/*body {*/
+/*    line-height: 1;*/
+/*}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    /*font-weight: 400;*/
+    line-height: 1;
+}
 ol, ul {
     list-style: none;
 }
@@ -41,24 +59,19 @@ blockquote, q {
     quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-/*html {*/
-/*    overflow-y: scroll;*/
-/*    font-size: 15px;*/
-/*}*/
+html {
+    overflow-y: scroll;
+    /*font-size: 15px;*/
+    color: #3a4654;
+}
 
 /* -----------------------------------------
-           02. BASE TYPOGRAPHY
+           01. BASE TYPOGRAPHY
 -------------------------------------------- */
 body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn, .btn-simple, a, .td-name, td {
     -moz-osx-font-smoothing: grayscale;
@@ -67,7 +80,7 @@ body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, 
 
 body {
     background-color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     color: #707070;
     font-weight: 400;
@@ -80,7 +93,6 @@ p:not(:last-child) {
 
 h1, h2, h3, h4, h5 {
     margin: 0 0 1rem;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     line-height: 1.21;
     color: initial;
@@ -89,25 +101,73 @@ h1, h2, h3, h4, h5 {
 
 /* These CSS variables are global, so they are available in all CSS modules */
 :root {
-
-    --color-brand--1: #ee7036;
-    --color-brand--2: #9297c8;
-
-    --color-light--0: #f6c1a7;
-    --color-light--1: #f7cb9a;
-    --color-light--2: #b6c796;
-
-    --color-white: #ffffff;
-    --color-dark--1: #676767;
-
+    --shop-font-family-Montserrat: 'Montserrat';
+    --shop-font-backup: segoe, iran-yekan;
+    --shop-font-family-rokh: rokh;
+    --shop-font-family-abi: abi;
+    --shop-font-default: var(--shop-font-family-Montserrat, sans-serif);
+    --shop-font-size-title: 24px;
+    --shop-font-size-h1: 44px;
+    --shop-font-size-h2: 32px;
+    --shop-font-size-h3: 25px;
+    --shop-font-size-h4: 24px;
+    --shop-font-size-h5: 20px;
+    --shop-font-size-h6: 18px;
+    --shop-font-size-subtitle: 17px;
+    --shop-font-size-body: 16px;
+    --shop-font-size-body-small: 15px;
+    --shop-font-size-caption: 14px;
+    --shop-font-size-caption-small: 13px;
+    --shop-font-size-tag: 12px;
+    --shop-font-size-tag-small: 10px;
+    --shop-font-size-tag-thin: 8px;
+    --shop-font-style-normal: normal;
+    --shop-font-weight-thin: 100;
+    --shop-font-weight-light: 300;
+    --shop-font-weight-regular: 400;
+    --shop-font-weight-medium: 500;
+    --shop-font-weight-semibold: 600;
+    --shop-font-weight-bold: 700;
+    --shop-font-weight-extrabold: 800;
+    --shop-font-weight-black: 900;
+    --shop-font-weight-extrablack: 950;
+    --shop-primary-color-100: #F3F6F9;
+    --shop-primary-color-200: #EBF0F4;
+    --shop-primary-color-300: #DBE3EA;
+    --shop-primary-color-400: #D4DBE3;
+    --shop-primary-color-500: #808D9D;
+    --shop-primary-color-600: #3A4654;
+    --shop-secondary-color-100: #FFCF97;
+    --shop-secondary-color-200: #FEA43A;
+    --shop-secondary-color-300: #FF8A00;
+    --shop-tertiary-color-100: #F7F7F7;
+    --shop-tertiary-color-200: #EDEDED;
+    --shop-tertiary-color-300: #E0E0E0;
+    --shop-tertiary-color-400: #BEBEBE;
+    --shop-tertiary-color-500: #979797;
+    --shop-tertiary-color-600: #676767;
+    --shop-white: #fff;
+    --shop-box-shadow-default: 0px 6px 12px 0px rgba(0, 0, 0, 0.09);
+    --shop-border-radius-default: 16px;
+    --shop-font-headline-h1: var(--shop-font-style-normal) var(--shop-font-weight-extrablack) var(--shop-font-size-h1) var(--shop-font-family-abi);
+    --shop-font-headline-h2: var(--shop-font-style-normal) var(--shop-font-weight-regular) var(--shop-font-size-h2) var(--shop-font-default);
+    --shop-font-headline-h3: var(--shop-font-style-normal) var(--shop-font-weight-extrabold) var(--shop-font-size-h3) var(--shop-font-default);
+    --shop-font-headline-h4: var(--shop-font-style-normal) var(--shop-font-weight-extrabold) var(--shop-font-size-h4) var(--shop-font-default);
+    --shop-font-headline-h5: var(--shop-font-style-normal) var(--shop-font-weight-extrabold) var(--shop-font-size-h5) var(--shop-font-default);
+    --shop-font-headline-h5-bold: var(--shop-font-style-normal) var(--shop-font-weight-bold) var(--shop-font-size-h5) var(--shop-font-default);
+    --shop-font-product-title: var(--shop-font-weight-bold) var(--shop-font-size-subtitle) var(--shop-font-default);
+    --shop-font-title: var(--shop-font-weight-bold) var(--shop-font-size-h4) var(--shop-font-default);
+    --shop-font-body: var(--shop-font-weight-regular) var(--shop-font-size-body-small) var(--shop-font-default);
+    --shop-font-product-title--responsive: var(--shop-font-weight-bold) var(--shop-font-size-caption) var(--shop-font-default);
 }
 
 /*========================================
-        03. PRE DEFINE CLASS CSS
+        02. PRE DEFINE CLASS CSS
 ==========================================*/
 .ptb-100 {
     padding: 100px 0;
 }
+
 .badge {
     display: inline;
     padding: 0.20rem .5rem;
@@ -135,6 +195,7 @@ h1, h2, h3, h4, h5 {
 .menu-item.top:hover {
     opacity: 1;
 }
+
 .meta-list li.list-inline-item:not(:last-child) {
     margin-right: 0.7rem;
 }
@@ -173,20 +234,21 @@ h1, h2, h3, h4, h5 {
 }
 
 /*countdown*/
-@media (min-width: 320px) and (max-width: 575px){
-    .action-btns .btn{
+@media (min-width: 320px) and (max-width: 575px) {
+    .action-btns .btn {
         margin: 6px 0;
     }
 }
 
 /*new offer css*/
 
-.offer-tag-wrap img{
+.offer-tag-wrap img {
     position: relative;
     display: block;
     width: 100%;
 }
-.offer-tag{
+
+.offer-tag {
     padding: 15px;
     position: absolute;
     left: 0;
@@ -194,40 +256,34 @@ h1, h2, h3, h4, h5 {
     top: 25%;
     color: #ffffff;
 }
-.offer-price-tag{
+
+.offer-price-tag {
     font-size: 63px;
     line-height: 108px;
     font-weight: 700;
     margin-bottom: 1.5rem;
     font-family: 'Montserrat', sans-serif;
 }
-.offer-price-tag small, .offer-price-tag span{
+
+.offer-price-tag small, .offer-price-tag span {
     font-size: 25px;
     line-height: initial;
 }
-.offer-price-tag span{
+
+.offer-price-tag span {
     position: relative;
     top: -40px;
 }
-.offer-price-tag p{
+
+.offer-price-tag p {
     line-height: initial;
 }
-.ribbon-2 {
-    position: absolute;
-    top: 0;
-    left: 42%;
-    transform: translate(-50%, -50%);
-    background: var(--color-light--0);
-    border-radius: 30px;
-}
-.ribbon-2 span{
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    padding: 0 15px 0 25px;
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300
 }
 
-.lead{font-size:1.25rem;font-weight:300}
 @layer components {
     .loader {
         width: 45px;
@@ -254,83 +310,27 @@ h1, h2, h3, h4, h5 {
     }
 }
 
-/* CVS */
-/*colors theme*/
 
-/*["#9297c8", "#ee7036", "#f7cb9a", "#f6c1a7", "#b6c796"]*/
-
-
-
-.-cus-color-brand--1 {
-    color: var(--color-brand--1);
-}
-
-.-cus-color-brand--2 {
-    color: var(--color-brand--2);
-}
-
-.-cus-color-light--0 {
-    color: var(--color-light--0);
-}
-
-.-cus-color-light--1 {
-    color: var(--color-light--1);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-}
-
-button:not([type="button"]) {
-    padding: 5px 10px;
-    border-radius: 6px;
-    color: #000000;
-    font-weight: 500;
-    background-color: var(--color-brand--1);
-}
-
-button:hover {
-    padding: 5px 10px;
-    border-radius: 6px;
-    background-color: var(--color-light--0);
-    cursor: pointer;
-}
 /*=========================================
-            05. HEADER SECTION CSS
+            01. HEADER SECTION CSS
 ============================================*/
-.menu-item-top{
-    padding: 12px 10px;
+.menu-item-top {
+    padding: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 13px;
     transition: all .25s ease-in-out;
 }
-.menu-item-top {
+
+.menu-item-top:hover {
     color: #ffffff;
-    /*border:1px solid #ffffff;*/
-}
-.menu-item-top:hover{
-    /*background: #ffffff;*/
-    color: var(--color-light--0);
 }
 
-.mobile-menu{
-    background-color: var(--color-light--0);
+.mobile-menu {
+    background-color: var(--shop-secondary-color-100);
 }
+
 /*=========================================
-            05. HERO SECTION CSS
+            02. HERO SECTION CSS
 ============================================*/
 .hero-equal-height {
     position: relative;
@@ -350,71 +350,37 @@ button:hover {
     width: 100%;
 }
 
-.hero-equal-height.hero-tab-slider {
-    min-height: 700px !important;
-}
 
-.shape-bottom img.bottom-shape {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    z-index: 1;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.outline-btn, .secondary-solid-btn, .primary-solid-btn, .solid-white-btn, .outline-white-btn, .secondary-outline-btn {
+.secondary-solid-btn, .outline-white-btn {
     padding: 12px 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 13px;
+    border-radius: 8px;
     transition: all .25s ease-in-out;
 }
+
 .outline-white-btn {
     color: #ffffff;
-    border:1px solid #ffffff;
+    border: 1px solid #ffffff;
 }
 
 .outline-white-btn:hover {
     background: #ffffff;
-    color: var(--color-light--0);
+    color: var(--shop-secondary-color-100);
 }
+
 .secondary-solid-btn {
     color: #fff;
-    background: var(--color-brand--1);
-    border: 1px solid var(--color-brand--1);
+    background: var(--shop-secondary-color-200);
+    border: 1px solid #fff;
 }
 
 .secondary-solid-btn:hover {
-    background: transparent;
-    color: var(--color-brand--1);
+    background: var(--shop-secondary-color-300);
+    color: #fff;
     -webkit-box-shadow: none;
     box-shadow: none;
-}
-
-.hero-bg-1, .hero-bg-2 {
-    position: relative;
-    display: block;
-    width: 100%;
-}
-
-
-.slider-bg-image, .gradient-overlay {
-    position: relative;
-    width: 100%;
-    display: block;
-}
-
-.slider-bg-image:before {
-    position: absolute;
-    content: '';
-    background: #030d1e;
-    opacity: 0.60;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
 }
 
 .hero-equal-height {
@@ -429,109 +395,15 @@ button:hover {
     height: 100%;
     width: 100%;
 }
-/*dot indicator css*/
-.dot-indicator-center .owl-dots {
-    position: absolute;
-    width: 100%;
-    margin-top: 0 !important;
-    bottom: 15px;
-}
-
-.dot-indicator-center.owl-theme .owl-dots .owl-dot span {
-    width: 30px;
-    height: 5px;
-}
-
-.custom-indicators li.active button span {
-    color: #ffffff;
-}
-
-.custom-indicators li button:focus {
-    outline: none;
-}
 
 @media (min-width: 320px) and (max-width: 575px) {
     .hero-equal-height.hero-tab-slider {
         min-height: 500px !important;
     }
-    .offer-tag{
+    .offer-tag {
         top: 10%;
     }
-    .custom-indicators li {
-        min-width: auto;
-    }
 
-    .custom-indicators li button {
-        padding: 6px 8px;
-    }
-}
-
-.hero-shape, .hero-shape-left {
-    position: absolute;
-    left: auto;
-    bottom: auto;
-    width: 100%;
-    height: 100%;
-
-}
-
-.hero-shape-left {
-    right: auto;
-    left: 0;
-}
-
-@media (min-width: 320px) and (max-width: 776px) {
-    .hero-shape-none-sm {
-        background: #ffffff !important;
-    }
-}
-
-/*group shape*/
-.group-shape-1, .group-shape-2, .group-shape-3, .group-shape-4 {
-    position: absolute;
-    max-height: 100%;
-    right: auto;
-}
-
-.group-shape-1 {
-    left: 12vw;
-    top: 12vw;
-}
-
-.group-shape-2 {
-    left: 10.2vw;
-    top: 7vw;
-    animation-name: angry-animation;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-}
-
-.group-shape-3 {
-    left: 10.2vw;
-    top: 25vw;
-}
-
-.group-shape-4 {
-    left: 40vw;
-    top: auto;
-    bottom: 70px;
-    animation-name: angry-animation;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-}
-
-/*custom arrow*/
-.custom-arrow.owl-theme .owl-nav button {
-    width: 30px;
-    background: transparent;
-    border: 1px dashed #ebebeb;
-    line-height: 26px;
 }
 
 @keyframes angry-animation {
@@ -552,127 +424,8 @@ button:hover {
     }
 }
 
-.custom-arrow.owl-theme .owl-nav button:hover {
-    background: #e80566;
-    border-color: #e80566;
-}
-
-.custom-arrow.owl-theme .owl-nav button:hover span {
-    color: #ffffff;
-}
-
-.custom-arrow.owl-theme .owl-nav button span {
-    font-size: 25px;
-    color: #e80566;
-}
-
-.custom-arrow-bottom-center.owl-theme .owl-nav {
-    width: 100%;
-    margin: auto;
-    margin-top: 8px;
-}
-
-.custom-arrow-left-right.owl-theme .owl-nav {
-    width: 100%;
-    top: 25%;
-}
-
-.custom-arrow-left-right.owl-theme .owl-nav button.owl-prev, .custom-arrow-left-right.owl-theme .owl-nav button.owl-next {
-    position: absolute;
-}
-
-.custom-arrow-left-right.owl-theme .owl-nav button.owl-prev {
-    left: -35px;
-}
-
-.custom-arrow-left-right.owl-theme .owl-nav button.owl-next {
-    right: -35px;
-}
-
-/*heighlight feature list*/
-
-.highlight-list li {
-    border: 1px dashed #ebebeb;
-    border-radius: 4px;
-    text-align: center;
-    padding: 0.75rem;
-    margin-bottom: 0.75rem;
-    min-width: 130px;
-}
-
-.highlight-list li h5 {
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.highlight-list li h6 {
-    font-size: 13px;
-}
-
-/*slider */
-.custom-indicators {
-    position: absolute;
-    bottom: 0;
-    z-index: 5;
-    width: 100%;
-}
-
-.custom-indicators li {
-    min-width: 200px;
-    transition: all 0.3s ease-in;
-}
-
-.custom-indicators li button {
-    border: none;
-    display: block;
-    width: 100%;
-    padding: 1.5rem;
-    justify-content: center;
-    border-radius: 4px 4px 0 0;
-    transition: all 0.3s ease-in;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
 @media (min-width: 320px) and (max-width: 992px) {
     .hero-equal-height {
         min-height: 600px !important;
     }
 }
-
-/*.secondary-button {*/
-/*  background-color: var(--color-white);*/
-/*  color: var(--color-dark--1);*/
-/*  padding: 10px 20px;*/
-/*  margin: 10px;*/
-/*  border-radius: 6px;*/
-/*  border: 2px solid var(--color-brand--1);*/
-/*  transition: background-color 0.3s ease-in-out, transform 0.2s;*/
-/*}*/
-/*.secondary-button:hover {*/
-/*  !*background-color: var(--color-brand--1);*!*/
-/*  !*transform: scale(1.05);*!*/
-/*}*/
-
-
-/*label {*/
-/*  font-size: 1.6rem;*/
-/*  font-weight: 600;*/
-/*}*/
-
-/*input,*/
-/*textarea {*/
-/*  width: 100%;*/
-/*  padding: 0.8rem 1.2rem;*/
-/*  font-family: inherit;*/
-/*  font-size: 1.6rem;*/
-/*  border: none;*/
-/*  border-radius: 5px;*/
-/*  background-color: #d6dee0;*/
-/*  transition: all 0.2s;*/
-/*}*/
-
-/*input:focus {*/
-/*  outline: none;*/
-/*  background-color: #fff;*/
-/*}*/

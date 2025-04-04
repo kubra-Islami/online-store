@@ -4,10 +4,11 @@ import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline/index.js";
 import {Dialog, DialogPanel} from "@headlessui/react";
 
 const navigation = [
-    {name: 'products', to: 'products'},
+    {name: 'Pages', href: 'pages'},
     {name: 'Features', to: 'features'},
-    {name: 'login', to: 'login'},
-    // { name: 'Company', href: '#' },
+    {name: 'products', to: 'products'},
+    {name: 'Categories', href: 'categories' },
+    {name: 'Login', to: 'login'},
 ]
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -16,13 +17,13 @@ const Navbar = () => {
             <div className='container'>
 
                 <nav aria-label="Global" className="flex justify-between items-center lg:px-8"
-                     style={{paddingLeft: '2rem', paddingRight: '2rem', paddingTop: "0.5rem"}}>
+                     style={{paddingLeft: '2rem', paddingRight: '2rem'}}>
                     <div className="flex ml-4">
                         {
                             !mobileMenuOpen && (
                                 <Link to="/" className="block p-2">
                                     <img
-                                        src="../../public/products/logo-main 2.svg"
+                                        src="../../public/products/logo-main.svg"
                                         alt="Company Logo"
                                         className="w-32 h-24 object-contain"
                                     />
@@ -63,7 +64,7 @@ const Navbar = () => {
                     <div className="fixed  inset-0 z-50 p-2.5 lg:px-8 "/>
                     <DialogPanel
                         className={`mobile-menu fixed inset-y-0  right-0 z-50 w-full overflow-y-auto  px-6 sm:max-w-sm sm:ring-1`}
-                        style={{paddingLeft: '2rem', paddingRight: '2rem', paddingTop: "1rem"}}
+                        style={{paddingLeft: '2rem', paddingRight: '2rem'}}
                     >
                         <div className="flex items-center justify-between ">
                             <Link to="/" className="-m-1.5 p-1.5">

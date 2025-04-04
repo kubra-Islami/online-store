@@ -6,7 +6,7 @@ function HeroSection() {
         <div
             className="hero-equal-height relative flex items-center justify-center bg-cover bg-center px-4"
 
-            style={{backgroundImage: "url('products/hero-bg-1.svg')"}}>
+            style={{backgroundImage: "url('products/hero-bg-main.svg')"}}>
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center lg:gap-96 md:gap-20" style={{paddingLeft: '2rem', paddingRight: '2rem', paddingTop: "0.5rem"}}>
 
@@ -29,7 +29,7 @@ function HeroSection() {
                     <div className="offer-tag-wrap mt-4 mt-sm-4 mt-md-0 mt-lg-0">
                             <div className="relative">
                                 <img
-                                    src="/products/herooImgsm.svg"
+                                    src="/products/hero-img.svg"
                                     alt="offer tag"
                                     className="w-full max-w-xs md:max-w-md lg:max-w-lg"
                                 />

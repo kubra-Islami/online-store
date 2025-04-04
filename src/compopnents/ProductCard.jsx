@@ -41,7 +41,7 @@ const ProductCard = () => {
     const {addToCart} = useCartStore();
     return (
         <div
-            className="container grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 ">
+            className="container grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8" style={{marginTop:"4rem",marginBottom:"4rem"}}>
             {products.map((product) => (
                 <Link key={product.id} to={product.href} className="group shadow-xl rounded-lg ">
                     <img
@@ -57,7 +57,7 @@ const ProductCard = () => {
                             <span className="" >{product.price}</span>
                             <button
                                 onClick={() => addToCart(product)}
-                                className="text-white px-4 py-2 hover:text-white border-none transition">
+                                className="text-white px-4 py-2 add-to-cart border-none transition">
                                 Add to Cart
                             </button>
                         </div>
