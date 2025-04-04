@@ -1,15 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Checkout from "./pages/Checkout";
-import Header from "./compopnents/Header.jsx";
-import ProductList from "./compopnents/ProductList.jsx";
+import Checkout from "./compopnents/Checkout.jsx";
+import Header from "./pages/Header.jsx";
+import ProductList from "./pages/ProductList.jsx";
+import HeroSection from "./pages/HeroSection.jsx";
 
 
 const App = () => {
     return (
         <Router>
             <Header />
+            <HeroSection/>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<ProductList />} />
