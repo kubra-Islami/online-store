@@ -2,12 +2,13 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline/index.js";
 import {Dialog, DialogPanel} from "@headlessui/react";
+import {BsCart2} from "react-icons/bs";
 
 const navigation = [
     {name: 'Pages', href: 'pages'},
     {name: 'Features', to: 'features'},
     {name: 'products', to: 'products'},
-    {name: 'Categories', href: 'categories' },
+    {name: 'Categories', href: 'categories'},
     {name: 'Login', to: 'login'},
 ]
 const Navbar = () => {
@@ -17,21 +18,29 @@ const Navbar = () => {
             <div className='container'>
 
                 <nav aria-label="Global" className="flex justify-between items-center lg:px-8"
-                     style={{paddingLeft: '2rem', paddingRight: '2rem'}}>
-                    <div className="flex ml-4">
-                        {
-                            !mobileMenuOpen && (
-                                <Link to="/" className="block p-2">
-                                    <img
-                                        src="../../public/products/logo-main.svg"
-                                        alt="Company Logo"
-                                        className="w-32 h-24 object-contain"
-                                    />
-                                </Link>
-                            )
-                        }
+                     style={{paddingLeft: '1rem', paddingRight: '1rem'}}>
+                   <div className="flex">
+                       <div className="flex ml-4">
+                           {
+                               !mobileMenuOpen && (
+                                   <Link to="/" className="block p-2">
+                                       <img
+                                           src="../../public/products/logo-main.svg"
+                                           alt="Company Logo"
+                                           className="w-32 h-24 object-contain"
+                                       />
+                                   </Link>
+                               )
+                           }
 
-                    </div>
+                       </div>
+                       <div className="shop-header__action--cart">
+                           <Link to="cart" className="shop-header__action--cart--btn">
+                               <BsCart2 className="isax isax-shopping-cart"/>
+                               <span id="mini-cart-count">0</span>
+                           </Link>
+                       </div>
+                   </div>
                     <div className="flex lg:hidden">
                         <button
                             type="button"
@@ -64,18 +73,17 @@ const Navbar = () => {
                     <div className="fixed  inset-0 z-50 p-2.5 lg:px-8 "/>
                     <DialogPanel
                         className={`mobile-menu fixed inset-y-0  right-0 z-50 w-full overflow-y-auto  px-6 sm:max-w-sm sm:ring-1`}
-                        style={{paddingLeft: '2rem', paddingRight: '2rem'}}
+                        style={{paddingLeft: '1rem', paddingRight: '1rem'}}
                     >
                         <div className="flex items-center justify-between ">
-                            <Link to="/" className="-m-1.5 p-1.5">
-                                <Link to="/" className="block p-2">
-                                    <img
-                                        src="../../public/products/logo-main 2.svg"
-                                        alt="Company Logo"
-                                        className="w-32 h-24 object-contain"
-                                    />
-                                </Link>
+                            <Link to="/" className="block p-2">
+                                <img
+                                    src="../../public/products/logo-main 2.svg"
+                                    alt="Company Logo"
+                                    className="w-32 h-24 object-contain"
+                                />
                             </Link>
+
                             <button
                                 type="button"
                                 onClick={() => setMobileMenuOpen(false)}
