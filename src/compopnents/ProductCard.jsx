@@ -45,47 +45,48 @@ const products = [
         imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
     },
 
-]
+];
 const ProductCard = () => {
     const {addToCart} = useCartStore();
     return (
-        <div
-            className="overflow-x-hidden grid gap-x-4 gap-y-10 xm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xl:gap-x-8 relative" style={{paddingTop:"4rem",paddingBottom:"4rem"}}>
+        <div className="overflow-x-hidden grid gap-x-4 gap-y-10 xm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xl:gap-x-8 relative" style={{paddingTop:"4rem",paddingBottom:"4rem"}}>
             {products.map((product) => (
-                <Link key={product.id} to={product.href}
-                      className="group shadow-xl rounded-lg product-card">
-                    <img
-                        alt={product.imageAlt}
-                        src={product.imageSrc}
-                        className="aspect-square overflow-x-hidden group-hover:opacity-75"
-                    />
-                    <span className="onsale">{product.onsale}</span>
+                <div key={product.id} style={{margin:"4px"}} className="group shadow-xl rounded-lg product-card">
+                    {/* Image with On Sale badge */}
+                    <div className="relative">
+                        <img
+                            alt={product.imageAlt}
+                            src={product.imageSrc}
+                            className="aspect-square overflow-x-hidden group-hover:opacity-75"
+                        />
+                        {/* On Sale Badge */}
+                        <span className="onsale">{product.onsale}</span>
+                    </div>
                     <div className="shop-newset__product__divider">
                         <div className="shop-newset__product__divider--line"></div>
                     </div>
                     <div style={{padding: '1rem'}} className="text-center">
-                        <h2 className="product-title text-lg font-semibold text-gray-800 ">{product.name}</h2>
-                        {/*<p className="text-gray-500 text-sm my-3  truncate">{product.imageAlt}</p>*/}
+                        <h2 className="product-title text-lg font-semibold text-gray-800">{product.name}</h2>
 
-                        <div className="flex justify-between items-center mt-4 " style={{paddingTop: '1rem'}}>
+                        <div className="flex justify-between items-center mt-4" style={{paddingTop: '1rem'}}>
                             <div className="flex flex-col">
                                 <bdi className="line-through product-price-old">{product.old_price}</bdi>
                                 <bdi className="product-price">{product.offered_price}</bdi>
                             </div>
-                            <Link to="add-to-basket" className=" add-to-cart flex">
+                            <Link to={product.href} className="add-to-cart flex">
                                 <button
                                     onClick={() => addToCart(product)}
-                                    className=" px-4 py-2 border-none transition">
+                                    className="px-4 py-2 border-none transition">
                                     Add to Cart
                                 </button>
                                 <BsCart2 className="icon-btn px-2"/>
                             </Link>
                         </div>
                     </div>
-                </Link>
+                </div>
             ))}
         </div>
-    )
+    );
 }
 
 export default ProductCard;
