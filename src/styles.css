@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5 {
     --shop-primary-color-200: #EBF0F4;
     --shop-primary-color-300: #DBE3EA;
     --shop-primary-color-400: #D4DBE3;
-    --shop-primary-color-500: #808D9D;
+    --shop-primary-color-500: #c3c3c3;
     --shop-primary-color-600: #3A4654;
     --shop-secondary-color-100: #FFCF97;
     --shop-secondary-color-200: #FEA43A;
@@ -326,7 +326,7 @@ h1, h2, h3, h4, h5 {
 
 .shop-header__action--cart {
     position: relative;
-    top: 25px;
+    top: 18px;
     left: 6px;
 }
 
@@ -485,9 +485,9 @@ h1, h2, h3, h4, h5 {
     position: relative;
     text-decoration: none;
     overflow: visible;
-    padding: 0.618em 1em;
+    padding: 1em 1em;
     color: var(--shop-primary-color-500);
-    background-color: #e9e6ed;
+    background-color: var(--shop-primary-color-100);
     border: 0;
     box-shadow: none;
     text-shadow: none;
@@ -677,15 +677,22 @@ h1, h2, h3, h4, h5 {
     align-self: end;
 }
 
-@media (min-width: 320px) and (max-width: 575px) {
-    .hero-equal-height.hero-tab-slider {
-        min-height: 500px !important;
-    }
+/* category */
+.icon_category_item {
+    color: inherit;
+}
 
-    .offer-tag {
-        top: 10%;
-    }
-
+.cat_item {
+    border-radius: 16px;
+    background-color: var(--shop-primary-color-100);
+    color: var(--shop-primary-color-600);
+}
+.cat_item span {
+    color: inherit;
+}
+.cat_item:hover {
+    background-color: var(--shop-secondary-color-300);
+    color: var(--shop-white); /* changes both icon and text */
 }
 
 @keyframes angry-animation {
@@ -706,6 +713,16 @@ h1, h2, h3, h4, h5 {
     }
 }
 
+@media (min-width: 320px) and (max-width: 575px) {
+    .hero-equal-height.hero-tab-slider {
+        min-height: 500px !important;
+    }
+
+    .offer-tag {
+        top: 10%;
+    }
+
+}
 @media (min-width: 320px) and (max-width: 992px) {
     /*.hero-equal-height {*/
     /*    min-height: 600px !important;*/
@@ -721,10 +738,5 @@ h1, h2, h3, h4, h5 {
 @media screen and (max-width: 1024px) {
     .shop-header__action--cart {
         top: 17px;
-    }
-}
-@media screen and (max-width: 640px) {
-    .logo-top {
-        padding-top: 10px;
     }
 }

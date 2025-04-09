@@ -28,13 +28,13 @@ const Navbar = ({ isScrolled }) => {
                 <div className="container mx-auto flex justify-between items-center">
                     {/* --- Logo and Cart --- */}
                     <div className="flex">
-                        <div className="flex ml-4">
+                        <div className="flex ml-4 relative top-2">
                             {!mobileMenuOpen && (
-                                <Link to="/" className="block p-2 logo-top">
+                                <Link to="/" className="block p-3 logo-top">
                                     <img
                                         src="../../public/products/logo-main.svg"
                                         alt="Company Logo"
-                                        className="w-32 lg:h-24 sm:h-20 object-contain"
+                                        className="w-32 lg:h-16 sm:h-14 object-contain"
                                     />
                                 </Link>
                             )}
@@ -92,7 +92,7 @@ const Navbar = ({ isScrolled }) => {
                             <img
                                 src="../../public/products/logo-main.svg"
                                 alt="Company Logo"
-                                className="w-32 h-20 object-contain relative top-2"
+                                className="w-32 h-16 object-contain relative top-2"
                             />
                         </Link>
 
