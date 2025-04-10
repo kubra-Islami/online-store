@@ -2,8 +2,8 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans:400,600&amp;display=swap";
 @import "tailwindcss";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+html, body, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6,  blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -18,7 +18,7 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    color: #3a4654;
+    /*color: #3a4654;*/
     vertical-align: baseline;
 }
 
@@ -326,7 +326,7 @@ h1, h2, h3, h4, h5 {
 
 .shop-header__action--cart {
     position: relative;
-    top: 18px;
+    top: 10px;
     left: 6px;
 }
 
@@ -342,9 +342,17 @@ h1, h2, h3, h4, h5 {
     font-size: 18px;
     color: var(--shop-primary-color-600);
 }
+
 .shop-header__action--cart--btn:hover {
     background-color: var(--shop-white);
     color: var(--shop-secondary-color-300);
+}
+
+/*mobile menu*/
+.shop-header__action--cart--mobile-menu {
+    position: relative;
+    top: 18px;
+    left: 6px;
 }
 
 .isax {
@@ -373,7 +381,6 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     font: var(--shop-font-weight-regular) var(--shop-font-size-tag) var(--shop-font-default);
 }
-
 
 
 /*=========================================
@@ -491,7 +498,7 @@ h1, h2, h3, h4, h5 {
     border: 0;
     box-shadow: none;
     text-shadow: none;
-    transition: all  0.10s ease-in-out;
+    transition: all 0.10s ease-in-out;
     display: flex;
     align-items: center;
     border-radius: 8px;
@@ -501,7 +508,7 @@ h1, h2, h3, h4, h5 {
     font-size: 16px;
     margin-left: 10px;
     padding: 0;
-    transition: all  0.10s ease-in-out;
+    transition: all 0.10s ease-in-out;
 }
 
 .add-to-cart button {
@@ -545,25 +552,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .onsale {
-    /*background-color: var(--shop-secondary-color-300) !important;*/
-    /*border-radius: 8px 8px 0 0 !important;*/
-    /*background-repeat: no-repeat;*/
-    /*padding-inline: 9px;*/
-    /*width: 53px;*/
-    /*height: 26px;*/
-    /*position: absolute;*/
-    /*top: 48px !important;*/
-    /*right: -6px !important;*/
-    /*font: var(--shop-font-weight-semibold) var(--shop-font-size-body) var(--shop-font-default);*/
-    /*letter-spacing: -0.8px;*/
-    /*color: var(--shop-white);*/
-    /*text-align: center;*/
-    /*padding: 0 !important;*/
-    /*min-width: unset !important;*/
-    /*min-height: unset !important;*/
-    /*line-height: unset !important;*/
-    /*font-weight: 600 !important;*/
-
     background-color: var(--shop-secondary-color-300);
     border-radius: 8px 8px 0 0;
     background-repeat: no-repeat;
@@ -571,8 +559,8 @@ h1, h2, h3, h4, h5 {
     width: 53px;
     height: 26px;
     position: absolute;
-    top: 10px;  /* Adjust the top position to fit your image */
-    right: -1px;  /* Adjust the right position */
+    top: 10px; /* Adjust the top position to fit your image */
+    right: -1px; /* Adjust the right position */
     font-weight: 600;
     color: var(--shop-white);
     text-align: center;
@@ -580,23 +568,8 @@ h1, h2, h3, h4, h5 {
     line-height: 26px;
 }
 
-/*.onsale {*/
-/*    align-items: center;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
 
 .onsale::before {
-    /*content: '';*/
-    /*width: 6px;*/
-    /*height: 6px;*/
-    /*background: var(--shop-secondary-color-300);*/
-    /*position: absolute;*/
-    /*right: 0;*/
-    /*top: 100%;*/
-    /*border-radius: 0 0 6px 0;*/
-    /*filter: contrast(0.4);*/
-
     content: '';
     width: 0;
     height: 0;
@@ -685,14 +658,17 @@ h1, h2, h3, h4, h5 {
 .cat_item {
     border-radius: 16px;
     background-color: var(--shop-primary-color-100);
-    color: var(--shop-primary-color-600);
+    /*color: var(--shop-primary-color-600);*/
 }
+
 .cat_item span {
     color: inherit;
 }
+
 .cat_item:hover {
     background-color: var(--shop-secondary-color-300);
     color: var(--shop-white); /* changes both icon and text */
+    cursor: pointer;
 }
 
 @keyframes angry-animation {
@@ -713,6 +689,19 @@ h1, h2, h3, h4, h5 {
     }
 }
 
+
+/*About Marketly*/
+.features {
+    color: #808D9D !important;
+    background-color: var(--shop-primary-color-100);
+}
+.about_marketly{
+    color: #808D9D !important;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+
+}
 @media (min-width: 320px) and (max-width: 575px) {
     .hero-equal-height.hero-tab-slider {
         min-height: 500px !important;
@@ -723,6 +712,7 @@ h1, h2, h3, h4, h5 {
     }
 
 }
+
 @media (min-width: 320px) and (max-width: 992px) {
     /*.hero-equal-height {*/
     /*    min-height: 600px !important;*/
@@ -737,6 +727,14 @@ h1, h2, h3, h4, h5 {
 
 @media screen and (max-width: 1024px) {
     .shop-header__action--cart {
-        top: 17px;
+        top: 6px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .about_marketly{
+        padding: 0;
+
     }
 }

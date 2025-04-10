@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline/index.js";
 import {Dialog, DialogPanel} from "@headlessui/react";
@@ -11,14 +11,14 @@ const navigation = [
     {name: 'Categories', href: 'categories'},
     {name: 'Login', to: 'login'},
 ]
-const Navbar = ({ isScrolled }) => {
+const Navbar = ({isScrolled}) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
         <div className='w-full'>
             <nav
                 className={`w-full transition-all duration-300 ${
-                    isScrolled ? 'bg-amber-500/40 backdrop-blur-md shadow-md' : ''
+                    isScrolled ? 'bg-gray-200/40 backdrop-blur-md shadow-md' : ''
                 }`}
                 style={{
                     paddingLeft: '1rem',
@@ -38,12 +38,15 @@ const Navbar = ({ isScrolled }) => {
                                     />
                                 </Link>
                             )}
-                        </div>
-                        <div className="shop-header__action--cart">
-                            <Link to="cart" className="shop-header__action--cart--btn">
-                                <BsCart2 className="isax isax-shopping-cart" />
-                                <span id="mini-cart-count">0</span>
-                            </Link>
+                            <div
+                                className={`shop-header__action--cart ${
+                                    mobileMenuOpen ? 'hidden' : ''
+                                }`}>
+                                <Link to="cart" className="shop-header__action--cart--btn">
+                                    <BsCart2 className="isax isax-shopping-cart" />
+                                    <span id="mini-cart-count">0</span>
+                                </Link>
+                            </div>
                         </div>
                     </div>
 
@@ -52,11 +55,13 @@ const Navbar = ({ isScrolled }) => {
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="-m-2.5 inline-flex text-white items-center justify-center rounded-md p-2.5"
-                        >
+                            className={`${
+                                isScrolled ? ' -m-2.5 inline-flex text-amber-500 items-center justify-center rounded-md p-2.5' : ''
+                            }`}>
+
                             <Bars3Icon
                                 aria-hidden="true"
-                                className={`size-6 transition-transform ${
+                                className={`size-8 transition-transform ${
                                     mobileMenuOpen ? 'hidden' : ''
                                 }`}
                             />
@@ -82,26 +87,35 @@ const Navbar = ({ isScrolled }) => {
 
             {/* Mobile Menu */}
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-                <div className="fixed inset-0 z-50 p-2.5 lg:px-8" />
+                <div className="fixed inset-0 z-50 p-2.5 lg:px-8"/>
                 <DialogPanel
                     className={`mobile-menu fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 sm:max-w-sm sm:ring-1`}
-                    style={{ paddingLeft: '1rem', paddingRight: '1rem' }}
+                    style={{paddingLeft: '1rem', paddingRight: '1rem'}}
                 >
                     <div className="flex items-center justify-between">
-                        <Link to="/" className="block p-2">
-                            <img
-                                src="../../public/products/logo-main.svg"
-                                alt="Company Logo"
-                                className="w-32 h-16 object-contain relative top-2"
-                            />
-                        </Link>
-
+                        <div className="flex">
+                            <Link to="/" className="block p-2">
+                                <img
+                                    src="../../public/products/logo-main.svg"
+                                    alt="Company Logo"
+                                    className="w-32 h-16 object-contain relative top-2"
+                                />
+                            </Link>
+                            <div className="shop-header__action--cart--mobile-menu">
+                                <Link to="cart" className="shop-header__action--cart--btn">
+                                    <BsCart2 className="isax isax-shopping-cart"/>
+                                    <span id="mini-cart-count">0</span>
+                                </Link>
+                            </div>
+                        </div>
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(false)}
-                            className="-m-2.5 rounded-md p-2.5 text-white"
+                            className={`${
+                                isScrolled ? ' -m-2.5 inline-flex text-white items-center justify-center rounded-md p-2.5' : ''
+                            }`}
                         >
-                            <XMarkIcon aria-hidden="true" className="size-6" />
+                            <XMarkIcon aria-hidden="true" className="size-8"/>
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
