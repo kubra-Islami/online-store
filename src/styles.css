@@ -309,15 +309,21 @@ h1, h2, h3, h4, h5 {
 /*=========================================
             01. HEADER SECTION CSS
 ============================================*/
-.menu-item-top {
-    padding: 5px;
+.menu-item-top,.menu-item-mobile{
+    padding: 5px 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    color: #3a4654;
     transition: all .25s ease-in-out;
 }
 
 .menu-item-top:hover {
     color: #ffffff;
+}
+
+
+.menu-item-mobile:hover {
+    color: var(--shop-secondary-color-200);
 }
 
 .mobile-menu {
@@ -337,12 +343,22 @@ h1, h2, h3, h4, h5 {
     transition: 0.3s;
     display: flex;
 }
-
-.shop-header__action--cart--btn i {
+.shop-header__action--cart--btn-scroll{
+    border: 1px solid var(--shop-secondary-color-300);
+    padding: 6px;
+    border-radius: 8px;
+    transition: 0.3s;
+    display: flex;
+}
+.shop-header__action--cart--btn i ,
+.shop-header__action--cart--btn-scroll i {
     font-size: 18px;
     color: var(--shop-primary-color-600);
 }
-
+.shop-header__action--cart--btn-scroll:hover{
+    background-color: var(--shop-secondary-color-300);
+    color: var(--shop-white);
+}
 .shop-header__action--cart--btn:hover {
     background-color: var(--shop-white);
     color: var(--shop-secondary-color-300);
@@ -381,8 +397,15 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     font: var(--shop-font-weight-regular) var(--shop-font-size-tag) var(--shop-font-default);
 }
-
-
+.login_btn{
+    border: 1px solid var(--shop-white);
+    padding: 6px 10px;
+    color: var(--shop-white);
+}
+.login_btn:hover{
+    background-color: var(--shop-white);
+    color: var(--shop-secondary-color-300);
+}
 /*=========================================
             02. HERO SECTION CSS
 ============================================*/

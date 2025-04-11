@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline/index.js";
+import { BiSearch } from "react-icons/bi";
+
 import {Dialog, DialogPanel} from "@headlessui/react";
 import {BsCart2} from "react-icons/bs";
 
 const navigation = [
     {name: 'Pages', href: 'pages'},
-    {name: 'Features', to: 'features'},
-    {name: 'products', to: 'products'},
+    {name: 'Best Sellers', to: 'Best-sellers'},
+    {name: 'Sales ', to: 'Sales '},
     {name: 'Categories', href: 'categories'},
     {name: 'Login', to: 'login'},
 ]
@@ -41,12 +43,33 @@ const Navbar = ({isScrolled}) => {
                             <div
                                 className={`shop-header__action--cart ${
                                     mobileMenuOpen ? 'hidden' : ''
-                                }`}>
-                                <Link to="cart" className="shop-header__action--cart--btn">
-                                    <BsCart2 className="isax isax-shopping-cart" />
+                                }`} style={{marginRight:"20px"}}>
+                                <Link to="cart"
+                                      className={`${isScrolled ? 'shop-header__action--cart--btn-scroll'  : 'shop-header__action--cart--btn'}`}>
+                                    <BsCart2 className="isax isax-shopping-cart"/>
                                     <span id="mini-cart-count">0</span>
                                 </Link>
                             </div>
+
+                            <div
+                                className ={`${mobileMenuOpen ? 'hidden' : 'relative group ml-5 h-10'}`}
+                            >
+                                {/* Search Icon */}
+                                <BiSearch
+                                    className="absolute left-1 -translate-y-1/2 text-gray-500 w-5 h-5 z-10 cursor-pointer"
+                                    style={{ cursor: "pointer", top:'23px' }}
+                                />
+
+                                {/* Input Field */}
+                                <input
+                                    type="text"
+                                    placeholder="Search..."
+                                    className="absolute left- w-0 text-center opacity-0 group-hover:w-[200px] group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white border border-amber-500 rounded-full pl-8 pr-4 py-2 text-sm focus:w-[200px] focus:outline-none"
+                                    style={{ marginLeft: "15px",padding:"6px 12px",left:"-18px",top:"5px"}}
+                                />
+                            </div>
+
+
                         </div>
                     </div>
 
@@ -70,12 +93,14 @@ const Navbar = ({isScrolled}) => {
 
                     {/* --- Desktop Nav --- */}
                     <div className="hidden lg:flex items-center">
-                        <div className="flex lg:gap-x-12">
+                        <div className="flex lg:gap-x-11">
                             {navigation.map((item) => (
                                 <Link
                                     key={item.name}
                                     to={item.to}
-                                    className="text-sm font-semibold menu-item-top"
+                                    className={`text-sm font-semibold px-1 py-1 rounded ${
+                                        item.name === 'Login' ? 'login_btn' : ''
+                                    } ${isScrolled ? 'menu-item-mobile' : 'menu-item-top'}`}
                                 >
                                     {item.name}
                                 </Link>
@@ -102,7 +127,9 @@ const Navbar = ({isScrolled}) => {
                                 />
                             </Link>
                             <div className="shop-header__action--cart--mobile-menu">
-                                <Link to="cart" className="shop-header__action--cart--btn">
+                                <Link to="cart"
+                                      className="shop-header__action--cart--btn">
+                                      {/*className={`${isScrolled ? 'shop-header__action--cart--btn-scroll'  : 'shop-header__action--cart--btn'}`}>*/}
                                     <BsCart2 className="isax isax-shopping-cart"/>
                                     <span id="mini-cart-count">0</span>
                                 </Link>
@@ -122,13 +149,24 @@ const Navbar = ({isScrolled}) => {
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
                                 {navigation.map((item) => (
-                                    <a
+                                    // <link
+                                    //     key={item.name}
+                                    //     href={item.href}
+                                    //     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold"
+                                    // >
+                                    //     {item.name}
+                                    // </link>
+
+                                    <Link
                                         key={item.name}
-                                        href={item.href}
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold"
+                                        to={item.to}
+                                        className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold ${
+                                            item.name === 'Login' ? 'login_btn' : ''
+                                        } ${isScrolled ? 'menu-item-mobile' : 'menu-item-top'}`}
                                     >
                                         {item.name}
-                                    </a>
+                                    </Link>
+
                                 ))}
                             </div>
                         </div>
