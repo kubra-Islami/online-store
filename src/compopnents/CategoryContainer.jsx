@@ -1,25 +1,25 @@
 import React, {useState} from "react";
 import {useKeenSlider} from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { MdOutlineSmartphone, MdOutlineChair, MdOutlineToys, MdOutlineEventNote } from "react-icons/md";
+import {MdOutlineSmartphone, MdOutlineChair, MdOutlineToys, MdOutlineEventNote} from "react-icons/md";
 
 // Material Icons
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import {FaTshirt} from "react-icons/fa";
-// import {MdArrowBack, MdArrowForward, MdChair, MdSmartphone, MdToys} from "react-icons/md";
 import {GiDogBowl, GiFruitBowl, GiHammerNails, GiLipstick, GiSoccerBall} from "react-icons/gi";
+import CategoryItem from "../pages/CategoryItem.jsx";
 
 const categories = [
-    {name: 'Fashion & Apparel', to: '/', icon: FaTshirt}, // no outline available
+    {name: 'Fashion & Apparel', to: '/', icon: FaTshirt},
     {name: 'Electronics & Gadgets', to: '/', icon: MdOutlineSmartphone},
     {name: 'Home & Living', to: '/', icon: MdOutlineChair},
-    {name: 'Food & Grocery', to: '/', icon: GiFruitBowl}, // no outline available
-    {name: 'Beauty & Personal Care', to: '/', icon: GiLipstick}, // no outline available
+    {name: 'Food & Grocery', to: '/', icon: GiFruitBowl},
+    {name: 'Beauty & Personal Care', to: '/', icon: GiLipstick},
     {name: 'Toys & Kids', to: '/', icon: MdOutlineToys},
-    {name: 'Sports & Outdoors', to: '/', icon: GiSoccerBall}, // no outline available
-    {name: 'Tools & DIY', to: '/', icon: GiHammerNails}, // no outline available
-    {name: 'Pets', to: '/', icon: GiDogBowl}, // no outline available
+    {name: 'Sports & Outdoors', to: '/', icon: GiSoccerBall},
+    {name: 'Tools & DIY', to: '/', icon: GiHammerNails},
+    {name: 'Pets', to: '/', icon: GiDogBowl},
     {name: 'Office & Stationery', to: '/', icon: MdOutlineEventNote},
 ];
 
@@ -54,7 +54,8 @@ function CategoryContainer() {
 
 
     return (
-        <div className="container my-16 px-6 relative" style={{marginTop: "60px", marginBottom: "60px",padding:"60px"}}>
+        <div className="container my-16 px-6 relative"
+             style={{marginTop: "60px", marginBottom: "60px", padding: "60px"}}>
 
             {/* ✅ Arrows OUTSIDE of the slider */}
             <ArrowBackIosNewIcon
@@ -79,16 +80,7 @@ function CategoryContainer() {
 
             {/* ✅ Slider itself */}
             <div ref={sliderRef} className="keen-slider">
-                {categories.map((cat, idx) => (
-                    <div
-                        key={idx}
-                        className="keen-slider__slide flex flex-col items-center text-center gap-2 p-4 rounded-lg transition-all duration-300 cat_item" style={{padding:'20px'}}
-                    >
-                        <cat.icon size={32} className="icon_category_item"/>
-                        <span className="text-sm font-medium text-inherit">{cat.name}</span>
-
-                    </div>
-                ))}
+                <CategoryItem categories={categories}/>
             </div>
         </div>
 

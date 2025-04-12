@@ -1,9 +1,34 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import {FaCheck} from "react-icons/fa";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const AboutMarkely = () => {
+    const sectionRef = useRef(null);
+    useEffect(() => {
+
+        const element = sectionRef.current;
+
+        gsap.fromTo(
+            element,
+            { opacity: 0, x: -200 },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1.2,
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 80%", // when top of section hits 80% of viewport height
+                    toggleActions: "play none none reverse", // animate in on scroll down, reverse on scroll up
+                },
+            }
+        );
+    }, []);
     return (
-        <div
+        <div ref={sectionRef}
             className="container about_marketly flex flex-col md:flex-row items-center lg:justify-between px-4 sm:px-6 md:px-8 py-12 gap-10">
 
             {/* Right side - Image */}
