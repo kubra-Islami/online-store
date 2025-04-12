@@ -1,8 +1,7 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 function HeroSection() {
     return (
-
         <div
             className="hero-equal-height relative flex items-center justify-center bg-cover bg-center px-4"
 
@@ -41,8 +40,8 @@ function HeroSection() {
                                         <span>$</span>0.99<small>/Mo</small>
                                         <p className="lead">Limited Time Offer!</p>
                                     </div>
-                                    <a href="offer-single-page.html" className="btn outline-white-btn " >Get Start
-                                        Now</a>
+                                    <Link to="offer-single-page.html" className="btn outline-white-btn " >Get Start
+                                        Now</Link>
                                 </div>
                             </div>
                         </div>

@@ -57,7 +57,7 @@ const Navbar = ({isScrolled}) => {
                                 {/* Search Icon */}
                                 <BiSearch
                                     className="absolute left-1 -translate-y-1/2 text-gray-500 w-5 h-5 z-10 cursor-pointer"
-                                    style={{ cursor: "pointer", top:'23px' }}
+                                    style={{ cursor: "pointer", top:'27px' }}
                                 />
 
                                 {/* Input Field */}
@@ -65,7 +65,7 @@ const Navbar = ({isScrolled}) => {
                                     type="text"
                                     placeholder="Search..."
                                     className="absolute left- w-0 text-center opacity-0 group-hover:w-[200px] group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white border border-amber-500 rounded-full pl-8 pr-4 py-2 text-sm focus:w-[200px] focus:outline-none"
-                                    style={{ marginLeft: "15px",padding:"6px 12px",left:"-18px",top:"5px"}}
+                                    style={{ marginLeft: "15px",padding:"6px 12px",left:"-18px",top:"8px"}}
                                 />
                             </div>
 

@@ -49,7 +49,7 @@ const products = [
 const ProductCard = () => {
     const {addToCart} = useCartStore();
     return (
-        <div className="overflow-x-hidden grid gap-x-4 gap-y-10 xm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xl:gap-x-8 relative" style={{paddingTop:"4rem",paddingBottom:"4rem"}}>
+        <div className="overflow-x-hidden grid gap-x-4 gap-y-10 xm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xl:gap-x-8 relative" style={{paddingTop:"4rem",paddingBottom:"2rem"}}>
             {products.map((product) => (
                 <div key={product.id} style={{margin:"4px"}} className="group shadow-xl rounded-lg product-card">
                     {/* Image with On Sale badge */}
