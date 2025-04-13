@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import ProductCard from "../compopnents/ProductCard.jsx";
 import {gsap} from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +14,7 @@ export default function ProductList() {
 
         gsap.fromTo(
             element,
-            { opacity: 0, x: 200 },
+            {opacity: 0, x: 200},
             {
                 opacity: 1,
                 x: 0,
@@ -28,10 +28,8 @@ export default function ProductList() {
         );
     }, []);
     return (
-        <div ref={sectionRef} className="bg-white">
-            <div className="container mx-auto flex flex-col items-center ">
-                <ProductCard />
-            </div>
+        <div ref={sectionRef}>
+                <ProductCard/>
         </div>
     )
 }

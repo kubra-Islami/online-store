@@ -22,6 +22,13 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
 @font-face {
     font-family: 'Montserrat' !important;
 }
@@ -89,12 +96,9 @@ body {
     line-height: 1.75;
 }
 
-p:not(:last-child) {
-    margin-bottom: 1.25em;
-}
 
 h1, h2, h3, h4, h5 {
-    margin: 0 0 1rem;
+    /*margin: 0 0 1rem;*/
     font-weight: 600;
     line-height: 1.21;
     color: initial;
@@ -196,70 +200,11 @@ h1, h2, h3, h4, h5 {
 .container {
     margin: 0 auto;
     max-width: 1470px;
+    padding:0 10px;
 }
-
-.ptb-100 {
-    padding: 100px 0;
+.section-spacing{
+    --spacer-size: 50px;
 }
-
-.badge {
-    display: inline;
-    padding: 0.20rem .5rem;
-    line-height: inherit;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 77%;
-}
-
-.badge-pill {
-    padding-right: .875em;
-    padding-left: .875em;
-    border-radius: 50rem;
-}
-
-.custom-radius {
-    border-radius: 15px;
-}
-
-.menu-item.top {
-    color: rgb(255, 255, 255);
-    opacity: 0.7;
-}
-
-.menu-item.top:hover {
-    opacity: 1;
-}
-
-.meta-list li.list-inline-item:not(:last-child) {
-    margin-right: 0.7rem;
-}
-
-.custom-shadow {
-    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.12);
-}
-
-.promo-icon {
-    position: relative;
-    display: block;
-    width: 100%;
-}
-
-.number-bg {
-    left: 0;
-    right: 0;
-    z-index: -1;
-    top: -30px;
-    color: #f2f2f2;
-    font-size: 115px;
-    line-height: 120px;
-    font-weight: 700;
-    position: absolute;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-animation: mover 2s infinite alternate;
-    animation: mover 2s infinite alternate;
-}
-
-
 /*promo style three*/
 @media (min-width: 776px) and (max-width: 991px) {
     .promo-single-wrap {
@@ -274,7 +219,13 @@ h1, h2, h3, h4, h5 {
     }
 }
 
-
+.shadow-md {
+    margin-bottom: 1rem;
+    box-shadow: var(--shop-box-shadow-default) !important;
+}
+.shadow-sm{
+    margin-bottom: 1rem;
+}
 .lead {
     font-size: 1.25rem;
     font-weight: 300
@@ -285,7 +236,7 @@ h1, h2, h3, h4, h5 {
         width: 45px;
         aspect-ratio: 0.75;
         --c: no-repeat linear-gradient(theme(colors.stone.800) 0 0);
-        background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+        background: var(--c) 0 50%, var(--c) 50% 50%, var(--c) 100% 50%;
         background-size: 20% 50%;
         animation: loading 1s infinite linear;
     }
@@ -357,6 +308,7 @@ h1, h2, h3, h4, h5 {
 .shop-header__action--cart--btn-scroll i {
     font-size: 18px;
     color: var(--shop-primary-color-600);
+    transition: all 0.6s ease-in-out;
 }
 
 .shop-header__action--cart--btn-scroll:hover {
@@ -407,11 +359,24 @@ h1, h2, h3, h4, h5 {
     border: 1px solid var(--shop-white);
     padding: 6px 10px;
     color: var(--shop-white);
+    transition: all 0.6s ease-in-out;
 }
 
 .login_btn:hover {
     background-color: var(--shop-white);
     color: var(--shop-secondary-color-300);
+}
+
+.login_btn_scrolled {
+    padding: 6px 10px;
+    background-color: var(--shop-white);
+    color: var(--shop-secondary-color-300);
+    transition: all 0.6s ease-in-out;
+}
+
+.login_btn_scrolled:hover {
+    background-color: var(--shop-secondary-color-300);
+    color: var(--shop-white);
 }
 
 /*=========================================
@@ -570,12 +535,21 @@ h1, h2, h3, h4, h5 {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    min-width: 335px;
+    width: 100%;
     border-radius: 16px;
     position: relative;
 }
 
-.product-card img {
+.product-card-bestseller {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 16px;
+    position: relative;
+}
+
+.product-card img, .product-card-bestseller img {
     position: relative;
     display: block;
     width: 100%;
@@ -689,7 +663,6 @@ h1, h2, h3, h4, h5 {
 .cat_item {
     border-radius: 16px;
     background-color: var(--shop-primary-color-100);
-    /*color: var(--shop-primary-color-600);*/
 }
 
 .cat_item span {
@@ -721,11 +694,6 @@ h1, h2, h3, h4, h5 {
 }
 
 
-/*About Marketly*/
-/*.features {*/
-/*    color: #808D9D !important;*/
-/*    background-color: var(--shop-primary-color-100);*/
-/*}*/
 .features {
     color: #808D9D !important;
     background-color: var(--shop-primary-color-100);
@@ -735,7 +703,46 @@ h1, h2, h3, h4, h5 {
 .about_marketly {
     margin-top: 4rem;
     margin-bottom: 8rem;
-    /* Don't add margin-left/right — Tailwind handles it responsively */
+}
+
+/*=========================================
+            03. BEST SELLER SECTION CSS
+============================================*/
+.show_all {
+    background-color: var(--shop-primary-color-100);
+    color: var(--shop-tertiary-color-600);
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.category_background li {
+    position: relative;
+    left: 0;
+    border-radius: 10px;
+    margin: 13px 10px;
+    font-size: 1.1rem;
+    padding: 6px;
+    transition: all .25s ease-in-out;
+}
+
+.selectedCategoryStyle {
+    background-color: var(--shop-secondary-color-300);
+    color: var(--shop-white);
+    left: -10px;
+}
+
+.category_background li span {
+    padding: 0 10px;
+}
+
+.category_background {
+    background-color: var(--shop-primary-color-100);
+    color: var(--shop-tertiary-color-600);
+}
+
+.selectedCategoryStyle {
+    background-color: var(--shop-secondary-color-300);
+    color: var(--shop-white);
 }
 
 /* footer */
@@ -881,6 +888,6 @@ h1, h2, h3, h4, h5 {
 
 @media screen and (max-width: 1280px) {
     .product-card {
-        min-width: 470px;
+        width: 100%;
     }
 }

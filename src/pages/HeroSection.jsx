@@ -11,14 +11,14 @@ function HeroSection() {
 
                 {/* Left Section */}
                     <div className="text-white space-y-6 text-center md:text-left">
-                        <span className="text-lg font-medium">Digital Marketing</span>
+                        {/*<span className="text-lg font-medium">Digital Marketing</span>*/}
                         <h1 className="text-3xl md:text-5xl font-bold">Black Friday Super Sale Offer!</h1>
-                        <p className="text-lg">
+                        <p className="text-lg" style={{marginBottom: "1.25em"}} >
                             Up to 90% OFF digital marketing plans. Hurry up, limited time offer is ticking down, the
                             deal ends in:
                         </p>
-                        <div className="action-btns mt-3">
-                            <a href="#" className="btn secondary-solid-btn">Get Start Now</a>
+                        <div className="action-btns mt-3" >
+                            <a href="#" className="btn secondary-solid-btn"  >Get Start Now</a>
                         </div>
 
                     </div>
