@@ -9,16 +9,16 @@ function Product({data}) {
     if (!data || !data.products) return null;
     return (
         data?.products?.map((product, id) => (
-            <div key={id}  className="group shadow-md rounded-lg product-card-bestseller">
-                {/* Image with On Sale badge */}
+            <div className="group shadow-md rounded-lg product-card-bestseller" key={id}>
                 <div className="relative">
                     <img
                         alt={product.imageAlt}
                         src={product.imageSrc}
                         className="aspect-square overflow-x-hidden group-hover:opacity-75"
                     />
-                    {/* On Sale Badge */}
-                    <span className={`${product.onsale ? 'onsale' : '' }`}>{product?.onsale}</span>
+                    {product.onsale && (
+                        <span className="onsale">{product.onsale}</span>
+                    )}
                 </div>
                 <div className="shop-newset__product__divider">
                     <div className="shop-newset__product__divider--line"></div>

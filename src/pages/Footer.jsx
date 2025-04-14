@@ -5,8 +5,8 @@ import {Link} from "react-router-dom";
 
 function Footer() {
     return (
-        <div className="container ">
-            <footer className="footer--main flex flex-wrap xl:flex-nowrap gap-y-8 px-4 sm:px-6 py-8 sm:py-12">
+        <div className="footer--main">
+            <footer className="container flex flex-wrap xl:flex-nowrap gap-y-8 px-4 sm:px-6 py-8 sm:py-12">
                 {/* Left Section */}
                 <div className="footer--content xl:w-1/2 w-full flex flex-col">
                     <a href="/" className="footer__logo flex items-center space-x-2 mb-6">
@@ -85,7 +85,7 @@ function Footer() {
                     {/*        <button className="bg-gray-300 px-4 py-1 rounded">SMS</button>*/}
                     {/*    </div>*/}
                     {/*</div>*/}
-                    <p className="mb-4 text-slate-300">Subscribe to our newsletter by entering your email.</p>
+                    <p style={{marginBottom:"10px"}}>Subscribe to our newsletter by entering your email.</p>
 
                     <div className="footer__newsletter mb-6">
                         <form className="relative w-full max-w-md">

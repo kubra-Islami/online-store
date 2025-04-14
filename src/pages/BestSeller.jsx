@@ -19,7 +19,7 @@ const data = [
                 id: 1,
                 name: 'Earthen Bottle',
                 href: '#',
-                offered_price: '50',
+                offered_price: '$50',
                 old_price: '$80',
                 satisfaction: "100%",
                 salesNum: 7,
@@ -30,7 +30,7 @@ const data = [
                 id: 2,
                 name: 'Nomad Tumbler',
                 href: '#',
-                offered_price: '70',
+                offered_price: '$70',
                 old_price: '$100',
                 satisfaction: "90%",
                 salesNum: 11,
@@ -41,11 +41,22 @@ const data = [
                 id: 3,
                 name: 'Focus Paper Refill',
                 href: '#',
-                offered_price: '80',
+                offered_price: '$80',
                 old_price: '$110',
                 satisfaction: "100%",
                 salesNum: 20,
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
+                imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
+            },
+            {
+                id: 4,
+                name: 'Focus Paper Refill',
+                href: '#',
+                offered_price: '$700',
+                old_price: '$900',
+                satisfaction: "100%",
+                salesNum: 20,
+                imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/10/O73VCN1.webp',
                 imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
             },
         ]
@@ -59,7 +70,7 @@ const data = [
                 id: 1,
                 name: 'Earthen Bottle',
                 href: '#',
-                offered_price: '50',
+                offered_price: '$50',
                 old_price: '$80',
                 onsale: "4%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
@@ -69,7 +80,7 @@ const data = [
                 id: 2,
                 name: 'Nomad Tumbler',
                 href: '#',
-                offered_price: '70',
+                offered_price: '$70',
                 old_price: '$100',
                 onsale: "5%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/10/O73VCN1.webp',
@@ -79,7 +90,7 @@ const data = [
                 id: 3,
                 name: 'Focus Paper Refill',
                 href: '#',
-                offered_price: '80',
+                offered_price: '$80',
                 old_price: '$110',
                 onsale: "10%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
@@ -96,7 +107,7 @@ const data = [
                 id: 1,
                 name: 'Earthen Bottle',
                 href: '#',
-                offered_price: '50',
+                offered_price: '$50',
                 old_price: '$80',
                 onsale: "4%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
@@ -106,7 +117,7 @@ const data = [
                 id: 2,
                 name: 'Nomad Tumbler',
                 href: '#',
-                offered_price: '70',
+                offered_price: '$70',
                 old_price: '$100',
                 onsale: "5%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/10/O73VCN1.webp',
@@ -116,7 +127,7 @@ const data = [
                 id: 3,
                 name: 'Focus Paper Refill',
                 href: '#',
-                offered_price: '80',
+                offered_price: '$80',
                 old_price: '$110',
                 onsale: "10%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
@@ -133,7 +144,7 @@ const data = [
                 id: 1,
                 name: 'Earthen Bottle',
                 href: '#',
-                offered_price: '50',
+                offered_price: '$50',
                 old_price: '$80',
                 onsale: "4%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
@@ -143,7 +154,7 @@ const data = [
                 id: 2,
                 name: 'Nomad Tumbler',
                 href: '#',
-                offered_price: '70',
+                offered_price: '$70',
                 old_price: '$100',
                 onsale: "5%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/10/O73VCN1.webp',
@@ -153,7 +164,7 @@ const data = [
                 id: 3,
                 name: 'Focus Paper Refill',
                 href: '#',
-                offered_price: '80',
+                offered_price: '$80',
                 old_price: '$110',
                 onsale: "10%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
@@ -170,7 +181,7 @@ const data = [
                 id: 1,
                 name: 'Earthen Bottle',
                 href: '#',
-                offered_price: '50',
+                offered_price: '$50',
                 old_price: '$80',
                 onsale: "4%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
@@ -180,7 +191,7 @@ const data = [
                 id: 2,
                 name: 'Nomad Tumbler',
                 href: '#',
-                offered_price: '70',
+                offered_price: '$70',
                 old_price: '$100',
                 onsale: "5%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/10/O73VCN1.webp',
@@ -190,7 +201,7 @@ const data = [
                 id: 3,
                 name: 'Focus Paper Refill',
                 href: '#',
-                offered_price: '80',
+                offered_price: '$80',
                 old_price: '$110',
                 onsale: "10%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
@@ -207,7 +218,7 @@ const data = [
                 id: 1,
                 name: 'Earthen Bottle',
                 href: '#',
-                offered_price: '50',
+                offered_price: '$50',
                 old_price: '$80',
                 satisfaction: "90%",
                 salesNum: 11,
@@ -219,7 +230,7 @@ const data = [
                 id: 2,
                 name: 'Nomad Tumbler',
                 href: '#',
-                offered_price: '70',
+                offered_price: '$70',
                 old_price: '$100',
                 onsale: "5%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/10/O73VCN1.webp',
@@ -229,7 +240,7 @@ const data = [
                 id: 3,
                 name: 'Focus Paper Refill',
                 href: '#',
-                offered_price: '80',
+                offered_price: '$80',
                 old_price: '$110',
                 onsale: "10%",
                 imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
@@ -252,14 +263,14 @@ function BestSeller() {
             setCurrentSlide(slider.track.details.rel);
         },
         breakpoints: {
-            "(max-width: 640px)": {
-                slides: {perView: 1, spacing: 8},
+            "(max-width: 639px)": {
+                slides: { perView: 1, spacing: 8 }, // < sm (mobile)
             },
-            "(max-width: 1024px)": {
-                slides: {perView: 2, spacing: 12},
+            "(min-width: 640px) and (max-width: 1023px)": {
+                slides: { perView: 2, spacing: 10 }, // sm to md
             },
         },
-        slides: {perView: 3, spacing: 13},
+        slides: {perView: 3, spacing: 6},
     });
 
     const handlePrev = () => {
@@ -272,12 +283,9 @@ function BestSeller() {
 
 
     return (
-        <div className="container mx-auto px-6 best-seller-container section-spacing">
-
-            {/* Header and Category bar on mobile/tablet */}
-            <div className="flex flex-col gap-4 lg:block">
-                {/* Header */}
-                <div className="flex flex-col lg:flex-row lg:justify-between" style={{paddingBottom: "2rem"}}>
+        <div className="products-container container mx-auto px-6 best-seller-container section-spacing">
+            <div className="flex flex-col gap-4 ">
+                <div className="flex sm:flex-col lg:flex-row justify-between" style={{paddingBottom: "2rem"}}>
                     <h2 className="text-3xl font-bold text-gray-800">
                         Best Sellers
                     </h2>
@@ -312,60 +320,45 @@ function BestSeller() {
                         />
                     </div>
                 </div>
-
-                {/* Category List for small/medium screens */}
-                <div className="lg:hidden flex overflow-x-auto gap-2 category_background p-4 rounded shadow" style={{marginBottom: "2rem"}}>
-                    <ul className="flex gap-4">
-                        {data.map((category, index) => (
-                            <li
-                                key={index}
-                                onClick={() => setSelectedCategory(category.category)}
-                                className={`flex items-center gap-2 whitespace-nowrap cursor-pointer px-4 py-2 rounded-md ${
-                                    selectedCategory === category.category
-                                        ? 'selectedCategoryStyle'
-                                        : 'hover:bg-gray-100'
-                                }`}
-                            >
-                                <category.icon size={18}/>
-                                <span>{category.category}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
             </div>
 
-            {/* Grid for large screens */}
-            <div className="hidden lg:grid grid-cols-4 gap-6 mt-10">
+            {/* Responsive Layout */}
+            <div className="flex flex-col lg:grid lg:grid-cols-4 gap-6 mt-10">
                 {/* Category sidebar */}
-                <div className="col-span-1 p-4 rounded shadow-sm category_background">
-                    <ul className="space-y-2">
+                <div className="lg:col-span-1 p-4 rounded shadow-sm category_background">
+                    <ul className="flex lg:block gap-4 lg:space-y-2 ">
                         {data.map((category, index) => (
                             <li
                                 key={index}
                                 onClick={() => setSelectedCategory(category.category)}
-                                className={`flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md ${
+                                className={`flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md whitespace-nowrap ${
                                     selectedCategory === category.category
                                         ? 'selectedCategoryStyle'
                                         : 'hover:bg-gray-100'
                                 }`}
                             >
-                                <category.icon size={18}/>
+                                <category.icon size={18} />
                                 <span>{category.category}</span>
                             </li>
                         ))}
                     </ul>
                 </div>
 
-                {/* Product Grid */}
-                <div ref={sliderRef} className="col-span-3 grid grid-cols-3 gap-4 keen-slider">
-                    <Product data={data.find(cat => cat.category === selectedCategory)} />
+                <div
+                    ref={sliderRef}
+                    className="best-seller-slider lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-6 lg:mt-0 keen-slider"
+                >
+                    {data
+                        .find(cat => cat.category === selectedCategory)
+                        ?.products
+                        .map((product) => (
+                            <div key={product.id} className="keen-slider__slide">
+                                <Product data={{ products: [product] }} />
+                            </div>
+                        ))}
                 </div>
             </div>
 
-            {/* Product Grid for mobile/tablet */}
-            <div ref={sliderRef} className="lg:hidden grid grid-cols-1 sm:grid-cols-2 gap-4 keen-slider mt-6">
-                <Product data={data.find(cat => cat.category === selectedCategory)} />
-            </div>
         </div>
     );
 
