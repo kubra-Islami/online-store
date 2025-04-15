@@ -193,6 +193,24 @@ h1, h2, h3, h4, h5 {
     --e-global-typography-text-font-weight: 400;
     --e-global-typography-accent-font-weight: 500;
 }
+/* global or inside a component's CSS/SCSS file */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--e-global-color-1c78538);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--e-global-color-ec11549);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--e-global-color-7f83c1f);
+}
+
 
 /*========================================
         02. PRE DEFINE CLASS CSS

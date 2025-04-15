@@ -1,6 +1,6 @@
 import React from "react";
 import {FaInstagram} from "react-icons/fa6";
-import {FaGreaterThan, FaLessThan, FaTelegram} from "react-icons/fa";
+import {FaGreaterThan, FaTelegram} from "react-icons/fa";
 import {Link} from "react-router-dom";
 
 function Footer() {
@@ -9,9 +9,9 @@ function Footer() {
             <footer className="container flex flex-wrap xl:flex-nowrap gap-y-8 px-4 sm:px-6 py-8 sm:py-12">
                 {/* Left Section */}
                 <div className="footer--content xl:w-1/2 w-full flex flex-col">
-                    <a href="/" className="footer__logo flex items-center space-x-2 mb-6">
+                    <a href="/public" className="footer__logo flex items-center space-x-2 mb-6">
                         <img
-                            src="/public/products/logo-main00.svg"
+                            src="/products/logo-main00.svg"
                             alt="logo"
                             // width="127"
                             className="w-[127px] max-w-full"
@@ -25,13 +25,6 @@ function Footer() {
                     </p>
 
                     <div className="flex flex-wrap lg:flex-nowrap gap-y-6">
-                        {/*/!* Trust Badges *!/*/}
-                        {/*<div className="flex flex-col gap-y-4 pe-4">*/}
-                        {/*    <img src="https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/11/Untitled-5-1.png" alt="badge1" />*/}
-                        {/*    <img src="https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/enemad.png" alt="badge2" />*/}
-                        {/*    <img src="https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/11/kasbokar-2.png" alt="badge3" />*/}
-                        {/*</div>*/}
-
                         {/* Footer Menus */}
                         <div className="flex flex-wrap justify-between w-full gap-y-6">
                             {/*<div className="flex flex-wrap justify-between w-full gap-y-6">*/}
@@ -78,13 +71,6 @@ function Footer() {
 
                 {/* Right Section */}
                 <div className="footer--info flex flex-col lg:flex-1 w-full">
-                    {/*<div className="flex items-center justify-between mb-5">*/}
-                    {/*    <p className="text-lg font-bold">Stay Connected with TechnoShop</p>*/}
-                    {/*    <div className="flex gap-x-4">*/}
-                    {/*        <button className="bg-gray-300 px-4 py-1 rounded">Email</button>*/}
-                    {/*        <button className="bg-gray-300 px-4 py-1 rounded">SMS</button>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
                     <p style={{marginBottom:"10px"}}>Subscribe to our newsletter by entering your email.</p>
 
                     <div className="footer__newsletter mb-6">

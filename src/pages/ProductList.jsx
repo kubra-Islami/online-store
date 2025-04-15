@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from "react";
-import ProductCard from "../compopnents/ProductCard.jsx";
+import ProductCard from "../compopnents/ProductCard";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
