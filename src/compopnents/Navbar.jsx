@@ -19,8 +19,8 @@ const Navbar = ({isScrolled}) => {
     return (
         <div className='w-full'>
             <nav
-                className={`w-full transition-all duration-300 ${
-                    isScrolled ? 'bg-gray-200/40 backdrop-blur-md shadow-md' : ''
+                className={`transition-all duration-300  ${
+                    isScrolled ? 'home-header shadow-md' : ''
                 }`}
                 style={{
                     paddingLeft: '1rem',
@@ -30,13 +30,16 @@ const Navbar = ({isScrolled}) => {
                 <div className="container mx-auto flex justify-between items-center">
                     {/* --- Logo and Cart --- */}
                     <div className="flex">
-                        <div className="flex ml-4 relative top-2">
+                        <div className="flex ml-4 items-center justify-center relative ">
                             {!mobileMenuOpen && (
                                 <Link to="/" className="block p-3 logo-top">
                                     <img
-                                        src="../../public/products/logo-main.svg"
+                                        src={isScrolled
+                                            ? "/products/logo-main%204.svg"
+                                            : "/products/logo-main 5.svg"
+                                        }
                                         alt="Company Logo"
-                                        className="w-32 lg:h-16 sm:h-14 object-contain"
+                                        className="w-32 h-16 object-contain"
                                     />
                                 </Link>
                             )}
@@ -121,7 +124,7 @@ const Navbar = ({isScrolled}) => {
                         <div className="flex">
                             <Link to="/" className="block p-2">
                                 <img
-                                    src="../../public/products/logo-main.svg"
+                                    src="/products/logo-main.svg"
                                     alt="Company Logo"
                                     className="w-32 h-16 object-contain relative top-2"
                                 />

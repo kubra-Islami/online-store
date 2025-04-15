@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 function Footer() {
     return (
-        <div className="footer--main">
+        <div className="footer--main block">
             <footer className="container flex flex-wrap xl:flex-nowrap gap-y-8 px-4 sm:px-6 py-8 sm:py-12">
                 {/* Left Section */}
                 <div className="footer--content xl:w-1/2 w-full flex flex-col">

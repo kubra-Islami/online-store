@@ -2,10 +2,12 @@
 
 import React,{useEffect,useState} from 'react'
 import Navbar from "../compopnents/Navbar.jsx";
+import {useLocation} from "react-router-dom";
 
 export default function Example() {
     const [isScrolled, setIsScrolled] = useState(false);
-
+    const location = useLocation();
+    const isHome = location.pathname === '/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,12 +27,7 @@ export default function Example() {
     }, []);
     return (
         <div className=''>
-            <header className="absolute w-full z-50 " style={{
-                position: 'fixed',
-                width: '100%',
-                top: 0,
-                zIndex: 50,
-            }}>
+            <header className={`absolute w-full z-50  ${isHome ? 'home-header' : 'other-header'}`}>
                 <Navbar isScrolled={isScrolled}/>
             </header>
         </div>

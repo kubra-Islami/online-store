@@ -220,7 +220,31 @@ h1, h2, h3, h4, h5 {
     max-width: 1470px;
     padding: 0 10px;
 }
-
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    height: 66px;
+}
+nav{
+    margin-bottom: 0;
+}
+.home-header{
+    /*background-color: rgba(229, 231, 235, 0.4); !* bg-gray-200 with 40% opacity *!*/
+    backdrop-filter: blur(20px); /* md blur size */
+}
+.other-header{
+    background-color: var(--e-global-color-b310285); /* bg-gray-200 with 40% opacity */
+    backdrop-filter: blur(12px); /* md blur size */
+}
+nav{
+    height: 100%;
+}
+.footer--main{
+    bottom: 0;
+    width: 100%;
+}
 .section-spacing {
     --spacer-size: 50px;
 }
@@ -306,7 +330,7 @@ h1, h2, h3, h4, h5 {
 
 .shop-header__action--cart {
     position: relative;
-    top: 10px;
+    top: 6px;
     left: 6px;
 }
 
@@ -378,9 +402,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .login_btn {
-    border: 1px solid var(--shop-white);
+    border: 2px solid var(--shop-white);
     padding: 6px 10px;
-    color: var(--shop-white);
+    border-radius: 6px;
+    /*color: var(--shop-white);*/
     transition: all 0.6s ease-in-out;
 }
 
@@ -394,13 +419,17 @@ h1, h2, h3, h4, h5 {
     background-color: var(--shop-white);
     color: var(--shop-secondary-color-300);
     transition: all 0.6s ease-in-out;
+    border-radius: 6px;
+    border: 2px solid var(--shop-secondary-color-300);
 }
 
 .login_btn_scrolled:hover {
     background-color: var(--shop-secondary-color-300);
     color: var(--shop-white);
 }
-
+.logo-top img {
+    transition: all 0.3s ease;
+}
 /*=========================================
             02. HERO SECTION CSS
 ============================================*/
@@ -774,16 +803,14 @@ h1, h2, h3, h4, h5 {
 
 /* footer */
 .footer--main {
-    /*border-radius: var(--shop-border-radius-default);*/
     background: rgb(58, 70, 84) !important;
     color: var(--shop-tertiary-color-400);
     padding: 50px;
-    /*margin-bottom: 80px;*/
 }
 
 .footer--main li {
     padding: 0;
-    list-style-type: initial;
+    /*list-style-type: initial;*/
 }
 
 .footer--main li:hover {
@@ -875,7 +902,7 @@ h1, h2, h3, h4, h5 {
 
 @media screen and (max-width: 1539px) {
     .footer--main {
-        margin: 80px 30px 80px 30px;
+        /*margin: 80px 30px 80px 30px;*/
     }
 
     .about_marketly {

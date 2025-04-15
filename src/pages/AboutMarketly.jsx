@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import {FaCheck} from "react-icons/fa";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +14,7 @@ const AboutMarkely = () => {
 
         gsap.fromTo(
             element,
-            { opacity: 0, x: -200 },
+            {opacity: 0, x: -200},
             {
                 opacity: 1,
                 x: 0,
@@ -33,13 +33,14 @@ const AboutMarkely = () => {
             className="container about_marketly w-full px-4 sm:px-6 md:px-8 py-12 flex flex-col lg:flex-row items-center lg:justify-between gap-10 max-w-[1539px] mx-auto"
         >
             {/* Right side - Image */}
-            <div className="w-full">
+            <div className="w-full bg-transparent  p-0 m-0 overflow-hidden">
                 <img
                     src="/products/Group-5.webp"
                     alt="Markely"
-                    className=" h-auto object-cover rounded-lg shadow-lg"
+                    className="w-full h-auto object-cover rounded-lg shadow-lg block"
                 />
             </div>
+
 
             {/* Left side - Text */}
             <div className="w-full">
@@ -57,19 +58,19 @@ const AboutMarkely = () => {
                 <div className="features rounded-lg p-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="flex items-center gap-3 p-2">
-                            <FaCheck className="text-amber-500" />
+                            <FaCheck className="text-amber-500"/>
                             <span className="text-lg">User-friendly interface</span>
                         </div>
                         <div className="flex items-center gap-3 p-2">
-                            <FaCheck className="text-amber-500" />
+                            <FaCheck className="text-amber-500"/>
                             <span className="text-lg">Fast performance</span>
                         </div>
                         <div className="flex items-center gap-3 p-2">
-                            <FaCheck className="text-amber-500" />
+                            <FaCheck className="text-amber-500"/>
                             <span className="text-lg">Secure environment</span>
                         </div>
                         <div className="flex items-center gap-3 p-2">
-                            <FaCheck className="text-amber-500" />
+                            <FaCheck className="text-amber-500"/>
                             <span className="text-lg">24/7 customer support</span>
                         </div>
                     </div>
