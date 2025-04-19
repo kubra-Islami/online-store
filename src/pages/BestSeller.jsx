@@ -8,6 +8,7 @@ import {GiDogBowl, GiLipstick, GiSoccerBall} from "react-icons/gi";
 import {Link} from "react-router-dom";
 import {FiArrowUpRight} from "react-icons/fi";
 import Product from "../compopnents/Product.jsx";
+import ColoredLine from "../compopnents/ColoredLine.jsx";
 
 const data = [
     {
@@ -285,7 +286,7 @@ function BestSeller() {
     return (
         <div className="products-container container mx-auto px-6 best-seller-container section-spacing">
             <div className="flex flex-col gap-4 ">
-                <div className="flex sm:flex-col lg:flex-row justify-between" style={{paddingBottom: "2rem"}}>
+                <div className="flex sm:flex-col lg:flex-row justify-between">
                     <h2 className="text-3xl font-bold text-gray-800 title">
                         Best Sellers
                     </h2>
@@ -321,8 +322,10 @@ function BestSeller() {
                             />
                         </div>
                     </div>
+
                 </div>
             </div>
+            <ColoredLine color="#E0E0E0" style={{paddingBottom: "2rem"}}/>
 
             {/* Responsive Layout */}
             <div className="flex flex-col lg:grid lg:grid-cols-4 gap-6 mt-10">

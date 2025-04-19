@@ -8,6 +8,7 @@ import {FiArrowUpRight} from "react-icons/fi";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Product from "../compopnents/Product.jsx";
+import ColoredLine from "../compopnents/ColoredLine.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 const products = [
@@ -122,7 +123,7 @@ export default function SalesProductList() {
 
         <div className="products-container container mx-auto px-6 best-seller-container section-spacing">
             <div className="flex flex-col gap-4 ">
-                <div className="flex sm:flex-col lg:flex-row justify-between" style={{paddingBottom: "2rem"}}>
+                <div className="flex sm:flex-col lg:flex-row justify-between" >
                     <h2 className="text-3xl font-bold text-gray-800 title">
                         Sales
                     </h2>
@@ -162,7 +163,7 @@ export default function SalesProductList() {
                     </div>
                 </div>
             </div>
-
+            <ColoredLine color="#E0E0E0" style={{paddingBottom: "2rem"}}/>
             {/* Responsive Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10">
                 <div className="lg:col-span-1 p-4">
@@ -223,7 +224,6 @@ export default function SalesProductList() {
             </div>
             <div
                 ref={sliderRef}
-                // best-seller-slider lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-6 lg:mt-0 keen-slider
                 className="best-seller-slider keen-slider lg:col-span-3 mt-6 lg:mt-0 "
             >
                 {products.map((product) => (
