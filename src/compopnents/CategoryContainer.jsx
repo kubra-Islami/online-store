@@ -55,7 +55,7 @@ function CategoryContainer() {
 
     return (
         <div className="container my-16 px-6 relative"
-             style={{marginTop: "60px", marginBottom: "60px", padding: "60px"}}>
+             style={{marginTop: "60px", padding: "60px"}}>
 
             {/* ✅ Arrows OUTSIDE of the slider */}
             <ArrowBackIosNewIcon

@@ -193,6 +193,7 @@ h1, h2, h3, h4, h5 {
     --e-global-typography-text-font-weight: 400;
     --e-global-typography-accent-font-weight: 500;
 }
+
 /* global or inside a component's CSS/SCSS file */
 ::-webkit-scrollbar {
     width: 10px;
@@ -212,39 +213,76 @@ h1, h2, h3, h4, h5 {
 }
 
 
+.title {
+    position: relative;
+    padding-left: 15px;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--e-global-color-ec11549);
+}
+
+/*.sales-container {*/
+/*    !*background-color: transparent;*!*/
+/*    background-image: linear-gradient(270deg, #3A4654 50%, #CAA6A600 50%);*/
+/*    padding: 10rem 0;*/
+/*    width: 100vw; !* Ensure it stretches across the viewport *!*/
+/*    !*margin-right: -80vw; !* Offset to ensure it aligns with the screen edges *!*!*/
+/*    !*left: 80%; !* Center the gradient *!*!*/
+/*}*/
+.sales-title {
+    font: var(--shop-font-weight-extrabold) var(--shop-font-size-h4) var(--shop-font-default);
+    margin-bottom: 49px;
+    letter-spacing: -0.72px;
+    color: var(--shop-primary-color-600);
+}
+
 /*========================================
         02. PRE DEFINE CLASS CSS
 ==========================================*/
 .container {
     margin: 0 auto;
     max-width: 1470px;
-    padding: 0 10px;
+    padding: 0 6px;
 }
-header{
+
+header {
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 50;
     height: 66px;
 }
-nav{
+
+nav {
     margin-bottom: 0;
 }
-.home-header{
+
+.home-header {
     /*background-color: rgba(229, 231, 235, 0.4); !* bg-gray-200 with 40% opacity *!*/
     backdrop-filter: blur(20px); /* md blur size */
 }
-.other-header{
+
+.other-header {
     background-color: var(--e-global-color-b310285); /* bg-gray-200 with 40% opacity */
     backdrop-filter: blur(12px); /* md blur size */
 }
-nav{
+
+nav {
     height: 100%;
 }
-.footer--main{
+
+.footer--main {
     bottom: 0;
     width: 100%;
 }
+
 .section-spacing {
     --spacer-size: 50px;
 }
@@ -330,7 +368,7 @@ nav{
 
 .shop-header__action--cart {
     position: relative;
-    top: 6px;
+    top: 1px;
     left: 6px;
 }
 
@@ -427,9 +465,11 @@ nav{
     background-color: var(--shop-secondary-color-300);
     color: var(--shop-white);
 }
+
 .logo-top img {
     transition: all 0.3s ease;
 }
+
 /*=========================================
             02. HERO SECTION CSS
 ============================================*/
@@ -711,6 +751,15 @@ nav{
     color: inherit;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .cat_item {
     border-radius: 16px;
     background-color: var(--shop-primary-color-100);
@@ -796,7 +845,8 @@ nav{
     background-color: var(--shop-secondary-color-300);
     color: var(--shop-white);
 }
-.best-seller-slider .keen-slider__slide{
+
+.best-seller-slider .keen-slider__slide {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
@@ -894,7 +944,7 @@ nav{
 
     .product-card-bestseller {
         max-width: 99%;
-        margin:10px auto;
+        margin: 10px auto;
 
     }
 }
@@ -914,7 +964,8 @@ nav{
         padding-right: 30px;
         padding-left: 30px;
     }
-    .container{
+
+    .container {
         max-width: 1200px;
     }
 }
@@ -926,8 +977,42 @@ nav{
     }
 }
 
-@media screen and (max-width: 1250px) and (min-width: 1020px) {
+@media (max-width: 1023px) {
+    .category_background ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .category_background ul::-webkit-scrollbar {
+        display: none;
+    }
+
     .category_background li {
-        font-size: 0.75rem;
+        flex-shrink: 0;
+        min-width: fit-content;
+    }
+
+    .category_background li span {
+        white-space: nowrap;
+    }
+}
+.section-spacing {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+    .section-spacing {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-spacing {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 }

@@ -251,7 +251,7 @@ const data = [
 ]
 
 function BestSeller() {
-    const [selectedCategory, setSelectedCategory] = useState(data[0].category); // assuming category names are unique
+    const [selectedCategory, setSelectedCategory] = useState(data[0].category);
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = data.length;
@@ -264,10 +264,10 @@ function BestSeller() {
         },
         breakpoints: {
             "(max-width: 639px)": {
-                slides: { perView: 1, spacing: 8 }, // < sm (mobile)
+                slides: {perView: 1, spacing: 8}, // < sm (mobile)
             },
             "(min-width: 640px) and (max-width: 1023px)": {
-                slides: { perView: 2, spacing: 10 }, // sm to md
+                slides: {perView: 2, spacing: 10}, // sm to md
             },
         },
         slides: {perView: 3, spacing: 6},
@@ -286,7 +286,7 @@ function BestSeller() {
         <div className="products-container container mx-auto px-6 best-seller-container section-spacing">
             <div className="flex flex-col gap-4 ">
                 <div className="flex sm:flex-col lg:flex-row justify-between" style={{paddingBottom: "2rem"}}>
-                    <h2 className="text-3xl font-bold text-gray-800">
+                    <h2 className="text-3xl font-bold text-gray-800 title">
                         Best Sellers
                     </h2>
 
@@ -300,24 +300,26 @@ function BestSeller() {
                         </div>
 
                         {/* Arrows */}
-                        <ArrowBackIosNewIcon
-                            className={`border px-2 rounded-md bg-white shadow ${
-                                currentSlide === 0
-                                    ? 'text-gray-300 cursor-not-allowed'
-                                    : 'text-orange-500 hover:text-orange-600 cursor-pointer'
-                            }`}
-                            fontSize="large"
-                            onClick={currentSlide === 0 ? null : handlePrev}
-                        />
-                        <ArrowForwardIosIcon
-                            className={`border px-2 rounded-md bg-white shadow ${
-                                currentSlide === totalSlides - 1
-                                    ? 'text-gray-300 cursor-not-allowed'
-                                    : 'text-orange-500 hover:text-orange-600 cursor-pointer'
-                            }`}
-                            fontSize="large"
-                            onClick={currentSlide === totalSlides - 1 ? null : handleNext}
-                        />
+                        <div className="hidden sm:flex gap-2 items-center">
+                            <ArrowBackIosNewIcon
+                                className={`border px-2 rounded-md bg-white shadow ${
+                                    currentSlide === 0
+                                        ? 'text-gray-300 cursor-not-allowed'
+                                        : 'text-orange-500 hover:text-orange-600 cursor-pointer'
+                                }`}
+                                fontSize="large"
+                                onClick={currentSlide === 0 ? null : handlePrev}
+                            />
+                            <ArrowForwardIosIcon
+                                className={`border px-2 rounded-md bg-white shadow ${
+                                    currentSlide === totalSlides - 1
+                                        ? 'text-gray-300 cursor-not-allowed'
+                                        : 'text-orange-500 hover:text-orange-600 cursor-pointer'
+                                }`}
+                                fontSize="large"
+                                onClick={currentSlide === totalSlides - 1 ? null : handleNext}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -326,8 +328,9 @@ function BestSeller() {
             <div className="flex flex-col lg:grid lg:grid-cols-4 gap-6 mt-10">
                 {/* Category sidebar */}
                 <div className="lg:col-span-1 p-4 rounded shadow-sm category_background">
-                    <ul className="flex lg:block gap-4 lg:space-y-2 ">
-                        {data.map((category, index) => (
+                    {/*<ul className="flex lg:block gap-4 lg:space-y-2 "> */}
+                    <ul className="flex lg:block gap-4 lg:space-y-2 overflow-x-auto no-scrollbar">
+                    {data.map((category, index) => (
                             <li
                                 key={index}
                                 onClick={() => setSelectedCategory(category.category)}
@@ -346,8 +349,8 @@ function BestSeller() {
 
                 <div
                     ref={sliderRef}
-                    className="best-seller-slider lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-6 lg:mt-0 keen-slider"
-                >
+                    // className="best-seller-slider lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-6 lg:mt-0 keen-slider"
+                    className="best-seller-slider keen-slider lg:col-span-3 mt-6 lg:mt-0 ">
                     {data
                         .find(cat => cat.category === selectedCategory)
                         ?.products
