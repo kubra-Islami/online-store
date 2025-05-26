@@ -8,7 +8,7 @@ function NotFoundPage() {
             <img
                 src="../../public/products/NotFound.png"
                 alt="Not Found Page"
-                className="w-fit h-96 object-contain "
+                className="w-fit h-80 object-contain"
                 style={{margin:'2rem 0'}}
             />
             <p className="text-red-600 font-bold w-fit ">Oops! The page you're looking for doesn't exist.</p>

@@ -1,0 +1,158 @@
+/* General form section padding */
+.form-section {
+    padding: 2rem 2.5rem;
+}
+
+/* Headline and text */
+.head-title-login {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.head-title-login h5 {
+    padding-bottom: 5px;
+}
+
+/* Full screen flex centering */
+.full-screen {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background styling */
+.hero-bg-2 {
+    position: relative;
+    z-index: 0;
+}
+.hero-bg-2::before {
+    position: absolute;
+    content: "";
+    background: url("../../../public/Login/login-img.svg") no-repeat center bottom / cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Padding top/bottom */
+.ptb-100 {
+    padding: 100px 0;
+}
+.form-group {
+    position: relative;
+}
+/* Inputs */
+.form-control:focus {
+    border-color: #65258a;
+    box-shadow: none;
+}
+input.form-control {
+    padding-left:60px !important; /* adjust if icon size changes */
+}
+.login-signup-form .form-group label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 90%;
+}
+
+.login-signup-form .form-group input {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    height: 3.4rem;
+    border: 1px solid lightgray;
+    margin: 10px 0;
+}
+
+.input-icon {
+    position: absolute;
+    top: 57%;
+    left: 12px;
+    transform: translateY(-50%);
+    /*color: #65258a;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    font-size: 20px; /* size matches icon size */
+}
+
+.input-icon span {
+    padding: 18px 15px;
+    border-left: 2px solid #65258a;
+    position: absolute;
+    font-size: 18px;
+    height: calc(3.4rem + 2px);
+    border-radius: 4px;
+    color: #afafaf;
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+    color: #b1b1b1 !important;
+    font-size: 13px;
+}
+
+/* Buttons */
+button {
+    border-radius: 4px;
+    transition: background-color 0.25s ease-in-out;
+}
+
+/* Text sizes */
+h1 {
+    line-height: 1.2;
+}
+.sign-in{
+    padding:0.5rem 1rem;
+}
+/* Responsive adjustments */
+
+@media (max-width: 991px) {
+    .ptb-100 {
+        padding: 55px 0;
+    }
+
+    .form-section {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Center left text on smaller screens */
+    .text-center {
+        text-align: center !important;
+    }
+
+    /* Smaller headline on mobile */
+    h1.text-4xl {
+        font-size: 2.25rem /* 36px */;
+    }
+}
+
+@media (max-width: 640px) {
+    /* Stack the form and welcome text vertically */
+    .flex {
+        flex-direction: column !important;
+    }
+
+    .form-section {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Adjust input size */
+    input {
+        font-size: 13px;
+        height: 3rem;
+    }
+
+    .input-icon {
+        width: 35px;
+        font-size: 16px;
+    }
+}
