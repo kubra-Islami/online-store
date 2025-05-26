@@ -270,7 +270,8 @@ nav {
 }
 
 .other-header {
-    background-color: var(--e-global-color-b310285); /* bg-gray-200 with 40% opacity */
+    /*background-color: var(--e-global-color-b310285); !* bg-gray-200 with 40% opacity *!*/
+    background-color:transparent; /* bg-gray-200 with 40% opacity */
     backdrop-filter: blur(12px); /* md blur size */
 }
 

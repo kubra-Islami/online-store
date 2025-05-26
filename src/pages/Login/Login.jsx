@@ -16,7 +16,7 @@ const Login = () => {
                     {/* Left Section */}
                     <div className="w-full md:w-5/12 lg:w-8/12 text-white mb-10 lg:mb-0 text-center lg:text-left">
                         <div>
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight text-white">
                                 Welcome Back!
                             </h1>
                             <p className="text-base sm:text-lg md:text-xl max-w-md mx-auto lg:mx-0">
@@ -57,7 +57,8 @@ const Login = () => {
                                         <div className="flex justify-between items-center mb-1">
                                             <label className="text-sm font-medium text-gray-700">Password</label>
                                             <a
-                                                href="password-reset.html"
+                                                // href="password-reset.html"
+                                                href="#"
                                                 className="text-xs text-gray-500 hover:text-gray-700"
                                             >
                                                 Forgot password?
@@ -76,7 +77,7 @@ const Login = () => {
                                     {/* Submit */}
                                     <button
                                         type="submit"
-                                        className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-md transition-colors duration-300 sign-in"
+                                        className="w-full  text-white font-semibold py-2 rounded-md transition-colors duration-300 sign-in"
                                     >
                                         Sign in
                                     </button>
@@ -84,9 +85,10 @@ const Login = () => {
                             </div>
 
                             {/* Bottom Link */}
-                            <div className="border-t px-6 py-4 bg-transparent text-sm text-center">
+                            <div className="border-t px-6 py-4 bg-transparent text-sm text-center create-account">
                                 <span className="text-gray-500">Not registered?</span>
-                                <a href="sign-up.html" className="text-indigo-600 hover:underline ml-1">
+                                {/*<a href="sign-up.html" className=" hover:underline ml-1">*/}
+                                <a href="#" className=" hover:underline ml-1">
                                     Create account
                                 </a>
                             </div>
