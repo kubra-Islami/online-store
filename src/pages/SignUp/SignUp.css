@@ -12,6 +12,10 @@
 .head-title-login h5 {
     padding-bottom: 5px;
 }
+.leading-tight{
+    color: white;
+
+}
 
 /* Full screen flex centering */
 .full-screen {
@@ -116,6 +120,7 @@ h1 {
     color: #3a4654;
 }
 /* Responsive adjustments */
+/* Responsive adjustments */
 .create-account a{
     font-size: 1rem;
     margin-left: 0.75rem;
@@ -123,19 +128,19 @@ h1 {
 }
 .create-account{
     border-top: 2px solid #c3c3c3;
-    margin-top: 1rem;
-}
-.login-acc{
+    padding-top: 1rem;
     margin-top: 2rem;
+}
+.create-acc{
+    margin-top: 2rem;
+}
+.checkbx {
+    font-size: 0.75rem;
 }
 @media (max-width: 991px) {
     .ptb-100 {
         padding: 55px 0;
     }
-
-    /*.form-section {*/
-    /*    padding: 2rem 0 1.5rem 1.5rem;*/
-    /*}*/
 
     /* Center left text on smaller screens */
     .text-center {
@@ -155,12 +160,14 @@ h1 {
     }
 
     /* Adjust input size */
+    /*input {*/
+    /*    font-size: 13px;*/
+    /*    height: 3rem;*/
+    /*}*/
     input:not([type="checkbox"]) {
         font-size: 13px;
         height: 3rem;
     }
-
-
     .input-icon {
         width: 35px;
         font-size: 16px;

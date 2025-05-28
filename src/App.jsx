@@ -4,12 +4,13 @@ import Home from "./pages/Home";
 import NotFoundPage from "./pages/NotFound/NotFoundPage.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Layout from "./layouts/Layout";
+import SignUp from "./pages/SignUp/SignUp.jsx";
 
 const App = () => {
     return (
         <Router>
             <Routes>
-                {/* Login route: header only, no footer */}
+                {/* SignUp route: header only, no footer */}
                 <Route
                     path="/login"
                     element={
@@ -18,7 +19,14 @@ const App = () => {
                         </Layout>
                     }
                 />
-
+                <Route
+                    path="/signup"
+                    element={
+                        <Layout showFooter={false}>
+                            <SignUp />
+                        </Layout>
+                    }
+                />
                 {/* Other routes: header and footer */}
                 <Route
                     path="/"
