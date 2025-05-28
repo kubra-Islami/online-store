@@ -1,0 +1,142 @@
+.full-screen {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.notfound {
+    position: relative;
+    z-index: 0;
+}
+
+.notfound::before {
+    position: absolute;
+    content: "";
+    background: url("../../../public/notFound/notFound.jpg") no-repeat center bottom / cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.gradient-overlay {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+/*.gradient-overlay:before{*/
+/*    position: absolute;*/
+/*    content: '';*/
+/*    background-image: linear-gradient(75deg, rgba(255, 138, 0, 100) 10%, rgba(255, 207, 151, 100)) !important;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    z-index: -2;*/
+/*}*/
+/*404 page*/
+.error-content .notfound-404 {
+    position: relative;
+    height: 280px;
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.error-content .notfound-404 h1 {
+    font-size: 230px;
+    font-weight: 700;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.ptb-100 {
+    padding: 100px 0;
+}
+
+.go-home {
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all .25s ease-in-out;
+}
+
+.btn-gohome {
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 1.5rem;
+    transition: all .25s ease-in-out;
+}
+
+.outline-white-btn:hover {
+    background: #ffffff;
+    color: var(--shop-secondary-color-300);
+}
+
+.outline-white-btn {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.fourofour {
+    font-size: 230px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-size: cover;
+    background-position: center;
+}
+
+.sth-wrong {
+    color: white;
+    font-size: 2.441em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .error-content .notfound-404 {
+        height: auto;
+        display: block;
+        position: relative;
+    }
+
+    .error-content .notfound-404 h1 {
+        font-size: 80px;
+        position: relative;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .error-content .notfound-404 h1 {
+        font-size: 80px;
+        position: relative;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .sth-wrong{
+        font-size: 1.7441em;
+    }
+}

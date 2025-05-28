@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import NotFoundPage from "./pages/NotFoundPage.jsx";
+import NotFoundPage from "./pages/NotFound/NotFoundPage.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Layout from "./layouts/Layout";
 
@@ -32,7 +32,7 @@ const App = () => {
                 <Route
                     path="*"
                     element={
-                        <Layout>
+                        <Layout showFooter={false} showHeader={false}>
                             <NotFoundPage />
                         </Layout>
                     }
