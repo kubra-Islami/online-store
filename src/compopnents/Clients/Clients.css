@@ -1,0 +1,206 @@
+/*!*client section css*!*/
+/*.client-section-wrap ul {*/
+/*    display: block;*/
+/*}*/
+
+/*.client-section-wrap ul li {*/
+/*    padding-right: 50px;*/
+/*    margin: 5px 0;*/
+/*}*/
+
+/*.client-section-wrap ul li img {*/
+/*    transition: all 0.3s ease-in;*/
+/*}*/
+
+/*.client-section-wrap ul li img:hover {*/
+/*    transform: scale(1.2);*/
+/*    -webkit-transform: scale(1.2);*/
+/*    -moz-transform: scale(1.2);*/
+/*    filter: none;*/
+/*    -webkit-filter: grayscale(0%);*/
+/*}*/
+
+/*.client-section-wrap ul li:last-child {*/
+/*    padding-right: 0;*/
+/*}*/
+/*.client-heading-wrap{*/
+/*    border: 4px solid #646464;*/
+/*    padding: 50px 50px 70px;*/
+/*    position: relative;*/
+/*}*/
+
+/*.client-logo-wrap{*/
+/*    background: #ffffff;*/
+/*    padding: 30px;*/
+/*    border-radius: 4px;*/
+/*    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12);*/
+/*    position: absolute;*/
+/*    top: -70px;*/
+/*}*/
+/*.ptb-100 {*/
+/*    padding: 100px 0;*/
+/*}*/
+/*.client-img {*/
+/*    -webkit-filter: none;*/
+/*    filter: none;*/
+/*    opacity: 1;*/
+/*}*/
+/*@media (min-width: 320px) and (max-width: 767px){*/
+/*    .client-heading-wrap, .client-para{*/
+/*        display: none;*/
+/*    }*/
+/*    .client-logo-wrap{*/
+/*        background: transparent;*/
+/*        top: 0;*/
+/*        box-shadow: none;*/
+/*        padding: 0;*/
+/*        position: relative;*/
+/*    }*/
+/*}*/
+
+/*@media (min-width: 320px) and (max-width: 992px) {*/
+/*    .ptb-100 {*/
+/*        padding: 55px 0;*/
+/*    }*/
+/*}*/
+
+/* client section css */
+.client-section-wrap {
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.client-section-wrap ul {
+    display: block;
+}
+
+.client-section-wrap ul li {
+    padding-right: 95px;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.client-section-wrap ul li img {
+    transition: all 0.3s ease-in;
+}
+
+.client-section-wrap ul li img:hover {
+    transform: scale(1.2);
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+.client-section-wrap ul li:last-child {
+    padding-right: 0;
+}
+
+.client-heading-wrap {
+    border: 4px solid #646464;
+    padding: 30px 25px;
+    margin-bottom: 20px;
+}
+
+/*.client-logo-wrap {*/
+/*    background: #ffffff;*/
+/*    padding: 30px;*/
+/*    border-radius: 4px;*/
+/*    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);*/
+/*    position: absolute;*/
+/*}*/
+
+.ptb-100 {
+    padding: 100px 0;
+}
+
+.client-img {
+    max-width: 90px;
+    height: auto;
+    opacity: 1;
+    /*transition: transform 0.3s ease-in;*/
+
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+.client-img:hover {
+    transform: scale(1.1);
+}
+.client-logo-wrap {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.client-para {
+    max-width: 100%;
+    padding-bottom: 40px;
+}
+/* Responsive */
+@media (max-width: 1024px) {
+    .client-section-wrap {
+        padding: 60px 0;
+    }
+
+    .client-img {
+        max-width: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .client-logo-wrap {
+        padding: 20px;
+    }
+
+    .client-img {
+        max-width: 60px;
+    }
+
+    .client-heading-wrap {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .client-para {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .client-img {
+        max-width: 50px;
+    }
+
+    .client-heading-wrap,
+    .client-para {
+        padding: 10px;
+    }
+}
+
+/*@media (max-width: 639px) {*/
+/*    .client-logo-wrap {*/
+/*        display: none; !* Fully hide on small screens *!*/
+/*    }*/
+/*}*/
+
+
+
+/*@media (min-width: 320px) and (max-width: 767px) {*/
+/*    .client-heading-wrap,*/
+/*    .client-para {*/
+/*        display: none;*/
+/*    }*/
+/*    .client-logo-wrap {*/
+/*        background: transparent;*/
+/*        top: 0;*/
+/*        box-shadow: none;*/
+/*        padding: 0;*/
+/*        position: relative;*/
+/*    }*/
+/*}*/
+
+/*@media (min-width: 320px) and (max-width: 992px) {*/
+/*    .ptb-100 {*/
+/*        padding: 55px 0;*/
+/*    }*/
+/*}*/

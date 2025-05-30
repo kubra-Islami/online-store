@@ -955,8 +955,62 @@ nav {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
+/*=========================================
+            29. BACK TO TOP CSS
+============================================*/
+.scroll-top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 105%;
+    right: 50px;
+    font-size: 16px;
+    border-radius: 50%;
+    z-index: 99;
+    color: #ffffff;
+    cursor: pointer;
+    background: var(--shop-secondary-color-300);
+    transition: 1s ease;
+    border: none;
 
-/* footer */
+    /* Flexbox to center icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.scroll-top.open {
+    bottom: 30px; /* shows the button */
+}
+
+.scroll-top span {
+    color: #fff;
+}
+
+.scroll-top:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 1;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+}
+
+button.scroll-top:focus {
+    outline: none;
+}
+
+.ti-angle-up:before {
+    content: "\e648";
+}
+
+/*=========================================
+            29.FOOTER CSS
+============================================*/
 .footer--main {
     background: rgb(58, 70, 84) !important;
     color: var(--shop-tertiary-color-400);
