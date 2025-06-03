@@ -265,7 +265,6 @@ nav {
 }
 
 .home-header {
-    /*background-color: rgba(229, 231, 235, 0.4); !* bg-gray-200 with 40% opacity *!*/
     backdrop-filter: blur(20px); /* md blur size */
 }
 
@@ -350,7 +349,7 @@ nav {
     padding: 5px 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #3a4654;
+    color: #5c5c5c;
     transition: all .25s ease-in-out;
 }
 
@@ -441,8 +440,8 @@ nav {
 }
 
 .login_btn {
-    border: 2px solid var(--shop-white);
-    padding: 6px 10px;
+    border: 1px solid var(--shop-secondary-color-300);
+    padding: 4px 10px;
     border-radius: 6px;
     /*color: var(--shop-white);*/
     transition: all 0.6s ease-in-out;
@@ -474,99 +473,99 @@ nav {
 /*=========================================
             02. HERO SECTION CSS
 ============================================*/
-.hero-equal-height {
-    position: relative;
-    min-height: 700px;
-    -js-display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
+/*.hero-equal-height {*/
+/*    position: relative;*/
+/*    min-height: 700px;*/
+/*    -js-display: flex;*/
+/*    display: -webkit-box;*/
+/*    display: -ms-flexbox;*/
+/*    display: flex;*/
+/*    -webkit-box-orient: vertical;*/
+/*    -webkit-box-direction: normal;*/
+/*    -ms-flex-direction: column;*/
+/*    flex-direction: column;*/
+/*    -webkit-box-pack: center;*/
+/*    -ms-flex-pack: center;*/
+/*    justify-content: center;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*}*/
 
-.offer-tag {
-    padding: 15px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 25%;
-    color: #ffffff;
-}
+/*.offer-tag {*/
+/*    padding: 15px;*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    top: 25%;*/
+/*    color: #ffffff;*/
+/*}*/
 
-.offer-price-tag {
-    font-size: 63px;
-    line-height: 108px;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-}
+/*.offer-price-tag {*/
+/*    font-size: 63px;*/
+/*    line-height: 108px;*/
+/*    font-weight: 700;*/
+/*    margin-bottom: 1.5rem;*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*}*/
 
-.offer-price-tag small, .offer-price-tag span {
-    font-size: 25px;
-    line-height: initial;
-}
+/*.offer-price-tag small, .offer-price-tag span {*/
+/*    font-size: 25px;*/
+/*    line-height: initial;*/
+/*}*/
 
-.offer-price-tag span {
-    position: relative;
-    top: -40px;
-}
+/*.offer-price-tag span {*/
+/*    position: relative;*/
+/*    top: -40px;*/
+/*}*/
 
-.offer-price-tag p {
-    line-height: initial;
-}
+/*.offer-price-tag p {*/
+/*    line-height: initial;*/
+/*}*/
 
-.secondary-solid-btn, .outline-white-btn {
-    padding: 12px 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
-    border-radius: 8px;
-    transition: all .25s ease-in-out;
-}
+/*.secondary-solid-btn, .outline-white-btn {*/
+/*    padding: 12px 30px;*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    font-weight: 600;*/
+/*    font-size: 13px;*/
+/*    border-radius: 8px;*/
+/*    transition: all .25s ease-in-out;*/
+/*}*/
 
-.outline-white-btn {
-    color: #ffffff;
-    border: 1px solid #ffffff;
-}
+/*.outline-white-btn {*/
+/*    color: #ffffff;*/
+/*    border: 1px solid #ffffff;*/
+/*}*/
 
-.outline-white-btn:hover {
-    background: #ffffff;
-    color: var(--shop-secondary-color-100);
-}
+/*.outline-white-btn:hover {*/
+/*    background: #ffffff;*/
+/*    color: var(--shop-secondary-color-100);*/
+/*}*/
 
-.secondary-solid-btn {
-    color: #fff;
-    background: var(--shop-secondary-color-200);
-    border: 1px solid #fff;
-}
+/*.secondary-solid-btn {*/
+/*    color: #fff;*/
+/*    background: var(--shop-secondary-color-200);*/
+/*    border: 1px solid #fff;*/
+/*}*/
 
-.secondary-solid-btn:hover {
-    background: var(--shop-secondary-color-300);
-    color: #fff;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+/*.secondary-solid-btn:hover {*/
+/*    background: var(--shop-secondary-color-300);*/
+/*    color: #fff;*/
+/*    -webkit-box-shadow: none;*/
+/*    box-shadow: none;*/
+/*}*/
 
-.hero-equal-height {
-    position: relative;
-    min-height: 700px;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
+/*.hero-equal-height {*/
+/*    position: relative;*/
+/*    min-height: 700px;*/
+/*    display: flex;*/
+/*    -webkit-box-orient: vertical;*/
+/*    -webkit-box-direction: normal;*/
+/*    flex-direction: column;*/
+/*    -webkit-box-pack: center;*/
+/*    justify-content: center;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*}*/
 
 
 /*=========================================
@@ -708,32 +707,32 @@ nav {
     background: var(--shop-primary-color-200);
 }
 
-.shop-newset__product__divider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-block-end: 18px;
-    padding-block-start: 18px;
-}
+/*.shop-newset__product__divider {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    padding-block-end: 18px;*/
+/*    padding-block-start: 18px;*/
+/*}*/
 
-.shop-newset__product__divider--line {
-    position: relative;
-    width: 80%;
-    height: 1px;
-    background: var(--shop-primary-color-200);
-}
+/*.shop-newset__product__divider--line {*/
+/*    position: relative;*/
+/*    width: 80%;*/
+/*    height: 1px;*/
+/*    background: var(--shop-primary-color-200);*/
+/*}*/
 
-.shop-newset__product__divider--line::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: -3px;
-    transform: translateX(-50%);
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--shop-primary-color-400);
-}
+/*.shop-newset__product__divider--line::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    top: -3px;*/
+/*    transform: translateX(-50%);*/
+/*    width: 8px;*/
+/*    height: 8px;*/
+/*    border-radius: 50%;*/
+/*    background: var(--shop-primary-color-400);*/
+/*}*/
 
 .product-price {
     font: var(--shop-font-weight-extrabold) var(--shop-font-size-h3) var(--shop-font-default);
