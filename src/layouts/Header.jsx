@@ -12,7 +12,7 @@ export default function Example() {
     useEffect(() => {
         const handleScroll = () => {
             const offset = window.scrollY;
-            if (offset > 50) {
+            if (offset > 690) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);

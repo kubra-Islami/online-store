@@ -11,7 +11,7 @@ const navigation = [
     {name: 'Best Sellers', to: 'Best-sellers'},
     {name: 'Sales ', to: 'Sales '},
     {name: 'Categories', href: 'categories'},
-    {name: 'Login', to: 'login'},
+    {name: 'login / register', to: 'login / register'},
 ]
 const Navbar = ({isScrolled}) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -102,7 +102,7 @@ const Navbar = ({isScrolled}) => {
                                     key={item.name}
                                     to={item.to}
                                     className={`text-sm font-semibold px-1 py-1 rounded
-                                     ${item.name === 'Login' ? (isScrolled ? 'login_btn_scrolled' : 'login_btn') : ''}
+                                     ${item.name === 'login / register' ? (isScrolled ? 'login_btn_scrolled' : 'login_btn') : ''}
                                      ${isScrolled ? 'menu-item-mobile ' : 'menu-item-top'}`}
                                 >
                                     {item.name}

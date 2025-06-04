@@ -9,6 +9,7 @@ import {FaArrowUp} from "react-icons/fa";
 
 const App = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    // const [preloader, setPreloader] = useState(false);
 
     // Scroll detection with cleanup
     useEffect(() => {
@@ -27,6 +28,17 @@ const App = () => {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
+
+    // useEffect(()=>{
+    //     const hanldlePreloader = window.onload = () => {
+    //         setPreloader(true)
+    //     }
+    //
+    //     return()=>{
+    //         window.removeEventListener("", hanldlePreloader);
+    //     }
+    // },[])
+
 
     return (
         <>

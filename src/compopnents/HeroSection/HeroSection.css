@@ -35,7 +35,7 @@
     left: 0;
 }
 .hero-slider-content{
-    margin-left: 160px;
+    margin-left: 140px;
 }
 .hero-slider-content p{
     padding-top: 20px;
@@ -44,10 +44,11 @@
     font-size: 40px;
     line-height: initial;
     font-weight: 700;
+    color: #fff;
 }
 .secondary-solid-btn {
-    color: #fff;
-    background: var(--shop-secondary-color-200);
+    color: #333;
+    background: #fff;
     /*border: 1px solid #fff;*/
     margin-top: 30px;
     padding: 12px 30px;
@@ -58,8 +59,8 @@
     transition: all .25s ease-in-out;
 }
 .secondary-solid-btn:hover {
-    background: var(--shop-secondary-color-300);
-    color: #fff;
+    /*background: #f4d5c6;*/
+    color: var(--shop-secondary-color-200);
     -webkit-box-shadow: none;
     box-shadow: none;
 }
