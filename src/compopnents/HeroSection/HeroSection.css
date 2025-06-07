@@ -1,7 +1,6 @@
 .ptb-70{
-    padding: 70px 0;
+    padding:70px 0;
 }
-
 .hero-equal-height {
     position: relative;
     min-height: 700px;
@@ -19,24 +18,24 @@
     height: 100%;
     width: 100%;
 }
-.hero {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
+/*.hero {*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    overflow: hidden;*/
+/*}*/
 
-.hero img{
-    padding-top: 25rem;
-}
+/*.hero img{*/
+/*    padding-top: 25rem;*/
+/*}*/
 
-.hero a{
-    position: absolute;
-    top: 75%;
-    right: 20%;
-}
+/*.hero a{*/
+/*    position: absolute;*/
+/*    top: 75%;*/
+/*    right: 20%;*/
+/*}*/
 .hero-equal-height.hero-tab-slider{
     min-height: 700px !important;
 }
@@ -53,7 +52,8 @@
     left: 0;
 }
 .hero-slider-content{
-    margin-left: 140px;
+    /*margin-right: 10%*/
+    max-width: 577px;
 }
 .hero-slider-content p{
     padding-top: 20px;
@@ -63,6 +63,7 @@
     line-height: initial;
     font-weight: 700;
     color: #fff;
+    /*max-width: 100px;*/
 }
 .secondary-solid-btn {
     color: #fff;
