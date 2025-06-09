@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {BsCart2} from "react-icons/bs";
+import {BsEye} from "react-icons/bs";
 import {useCartStore} from "../store/cartStore.jsx";
 
 function Product({data}) {
@@ -35,9 +35,9 @@ function Product({data}) {
                             <button
                                 onClick={() => addToCart(product)}
                                 className="px-4 py-2 border-none transition">
-                                Add to Cart
+                                View
                             </button>
-                            <BsCart2 className="icon-btn px-2"/>
+                            <BsEye className="icon-btn px-1"/>
                         </Link>
                     </div>
                 </div>

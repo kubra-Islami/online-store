@@ -100,7 +100,9 @@
     padding: 30px 25px;
     margin-bottom: 20px;
 }
-
+.slick-track{
+    padding: 10px 0;
+}
 /*.client-logo-wrap {*/
 /*    background: #ffffff;*/
 /*    padding: 30px;*/
@@ -127,9 +129,12 @@
 }
 .client-logo-wrap {
     background: #ffffff;
-    padding: 30px;
+    padding: 10px 5px;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.slick-arrow{
+    display: none !important;
 }
 .client-para {
     max-width: 100%;

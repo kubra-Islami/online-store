@@ -121,7 +121,7 @@ export default function SalesProductList() {
     };
     return (
 
-        <div className="products-container container mx-auto px-6 best-seller-container section-spacing">
+        <div className="products-container container mx-auto px-6 best-seller-container section-spacing" >
             <div className="flex flex-col gap-4 ">
                 <div className="flex sm:flex-col lg:flex-row justify-between" >
                     <h2 className="text-3xl font-bold text-gray-800 title">
@@ -165,7 +165,7 @@ export default function SalesProductList() {
             </div>
             <ColoredLine color="#E0E0E0" style={{paddingBottom: "2rem"}}/>
             {/* Responsive Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10" style={{padding:'1rem'}}>
                 <div className="lg:col-span-1 p-4">
                 {/* sales img */}
                 <div className="flex flex-col items-center justify-center text-center lg:items-start lg:justify-start">

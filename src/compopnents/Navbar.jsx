@@ -7,7 +7,7 @@ import {Dialog, DialogPanel} from "@headlessui/react";
 import {BsCart2} from "react-icons/bs";
 
 const navigation = [
-    {name: 'Pages', href: 'pages'},
+    // {name: 'Pages', href: 'pages'},
     {name: 'Best Sellers', to: 'Best-sellers'},
     {name: 'Sales ', to: 'Sales '},
     {name: 'Categories', href: 'categories'},

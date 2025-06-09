@@ -1,13 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {useCartStore} from "../store/cartStore.jsx";
-import { BsCart2 } from "react-icons/bs";
+import {BsCart2, BsEye} from "react-icons/bs";
 
 
 const ProductCard = ({product}) => {
     const {addToCart} = useCartStore();
     return (
-        <div className="products-container shadow-md rounded-lg product-card relative ">
+        <div className="products-container shadow-md rounded-lg product-card relative" >
             {/* Image with On Sale badge */}
             <div className="">
                 <img
@@ -32,9 +32,9 @@ const ProductCard = ({product}) => {
                         <button
                             onClick={() => addToCart(product)}
                             className="px-4 py-2 border-none transition">
-                            Add to Cart
+                            View
                         </button>
-                        <BsCart2 className="icon-btn px-2"/>
+                        <BsEye className="icon-btn px-1"/>
                     </Link>
                 </div>
             </div>
