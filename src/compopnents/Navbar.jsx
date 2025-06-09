@@ -11,7 +11,7 @@ const navigation = [
     {name: 'Best Sellers', to: 'Best-sellers'},
     {name: 'Sales ', to: 'Sales '},
     {name: 'Categories', href: 'categories'},
-    {name: 'login / register', to: 'login / register'},
+    {name: 'login / register', to: 'login'},
 ]
 const Navbar = ({isScrolled}) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,7 +26,6 @@ const Navbar = ({isScrolled}) => {
                     paddingLeft: '1rem',
                     paddingRight: '1rem',
                 }}>
-                {/* ✅ This is the centered container */}
                 <div className="container mx-auto flex justify-between items-center">
                     {/* --- Logo and Cart --- */}
                     <div className="flex">

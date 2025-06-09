@@ -48,10 +48,10 @@
     position: relative;
 }
 /* Inputs */
-.form-control:focus {
-    border-color: #65258a;
-    box-shadow: none;
-}
+/*.form-control:focus {*/
+/*    border-color: #65258a;*/
+/*    box-shadow: none;*/
+/*}*/
 input.form-control {
     padding-left:60px !important;
 }
@@ -81,15 +81,15 @@ input.form-control {
     font-size: 20px;
 }
 
-.input-icon span {
-    padding: 18px 15px;
-    border-left: 2px solid #65258a;
-    position: absolute;
-    font-size: 18px;
-    height: calc(3.4rem + 2px);
-    border-radius: 4px;
-    color: #afafaf;
-}
+/*.input-icon span {*/
+/*    padding: 18px 15px;*/
+/*    border-left: 2px solid #65258a;*/
+/*    position: absolute;*/
+/*    font-size: 18px;*/
+/*    height: calc(3.4rem + 2px);*/
+/*    border-radius: 4px;*/
+/*    color: #afafaf;*/
+/*}*/
 
 /* Placeholder styling */
 input::placeholder,
@@ -102,14 +102,15 @@ select::placeholder {
 h1 {
     line-height: 1.2;
 }
-.sign-in{
+.log-in{
     background-color: var(--e-global-color-ec11549);
     padding:0.4rem 0.75rem;
     margin-top: 1rem;
+    border:1px solid var(--e-global-color-7f83c1f);
     transition: all 0.5s ease-in-out;
 }
 
-.sign-in:hover{
+.log-in:hover{
     cursor: pointer;
     background-color: transparent;
     border:1px solid var(--e-global-color-7f83c1f);
