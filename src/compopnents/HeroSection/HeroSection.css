@@ -48,8 +48,10 @@
     /*max-width: 100px;*/
 }
 .secondary-solid-btn {
-    color: #fff;
-    background: #f19a5b;
+
+
+    background: var(--shop-secondary-color-300);
+    color: #ffffff;
     border: 1px solid #fff;
     margin-top: 30px;
     padding: 12px 30px;
@@ -60,8 +62,9 @@
     transition: all .25s ease-in-out;
 }
 .secondary-solid-btn:hover {
-    /*background: #f4d5c6;*/
-    color: #333;
+    color: #fba80a;
+    background: #f4d5c6;
+    border: 1px solid var(--shop-secondary-color-300);
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -76,23 +79,26 @@
     padding-top: 50px;
     max-height: 700px;
 }
-/*@media (min-width: 320px) and (max-width: 992px) {*/
-/*    .hero-equal-height{*/
-/*        min-height: auto !important;*/
-/*    }*/
-/*    .hero img{*/
-/*        padding-top: 0 !important;*/
-/*    }*/
-/*}*/
 
-/*@media (min-width: 320px) and (max-width: 575px){*/
-/*    .hero-equal-height.hero-tab-slider{*/
-/*        min-height: 500px !important;*/
-/*    }*/
-/*    .hero img{*/
-/*        padding-top: 0 !important;*/
-/*    }*/
-/*}*/
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 60s linear infinite; /* 60 seconds for one full rotation */
+}
+
+
+.bg-dot-pattern {
+    background-image: radial-gradient(#fff 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
 
 @media (max-width: 1024px) {
     .hero-equal-height {
@@ -126,9 +132,14 @@
     }
 
     .img-hero {
-        padding-top: 20px;
-        max-width: 100%;
-        height: auto;
+        display: none;
+    }
+
+    .animate-spin-slow{
+        display: none;
+    }
+    .heroo{
+        margin-top: 60px;
     }
 }
 
@@ -138,3 +149,17 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .animate-spin-slow {
+        display: none;
+    }
+}
+
+
+@media screen and (width < 640px) {
+    .text-content{
+        position: relative;
+        left: 30%;
+    }
+
+}

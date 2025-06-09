@@ -3,7 +3,11 @@ export default {
   mode: "jit",
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
+      },
+    },
     screens: {
       sm: '640px',
       md: '768px',
