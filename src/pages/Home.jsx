@@ -2,9 +2,9 @@ import React from "react";
 import SalesProductList from "./SalesProductList.jsx";
 import CategoryContainer from "../compopnents/CategoryContainer.jsx";
 import AboutMarketly from "./AboutMarketly.jsx";
-import BestSeller from "./BestSeller.jsx";
+import BestSeller from "../compopnents/BestSeller.jsx";
 import HeroSection from "../compopnents/HeroSection/HeroSection.jsx";
-import Brands from "../compopnents/Brand.jsx";
+import Brands from "../compopnents/Brand/Brand.jsx";
 import Clients from "../compopnents/Clients/Clients.jsx";
 
 const Home = () => {

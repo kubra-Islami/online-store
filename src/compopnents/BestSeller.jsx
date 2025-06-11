@@ -7,8 +7,8 @@ import {MdOutlineChair, MdOutlineToys} from "react-icons/md";
 import {GiDogBowl, GiLipstick, GiSoccerBall} from "react-icons/gi";
 import {Link} from "react-router-dom";
 import {FiArrowUpRight} from "react-icons/fi";
-import Product from "../compopnents/Product.jsx";
-import ColoredLine from "../compopnents/ColoredLine.jsx";
+import Product from "./Product.jsx";
+import ColoredLine from "./ColoredLine.jsx";
 
 const data = [
     {

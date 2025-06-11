@@ -50,7 +50,7 @@ const AppRoutes = () => {
 
     return (
         <>
-            {isLoading && <Preloader />} {/* Show loader while route is loading */}
+            {isLoading && <Preloader />}
 
             <Routes>
                 <Route

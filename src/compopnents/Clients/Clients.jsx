@@ -16,6 +16,20 @@ const clientLogos = [
     "../../../public/clients/clients-logo-08.png",
 ];
 const sliderSettings = {
+    // dots: false,
+    // infinite: true,
+    // speed: 2000,
+    // slidesToShow: 7,
+    // slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    // responsive: [
+    //     { breakpoint: 1024, settings: { slidesToShow: 6 } },
+    //     { breakpoint: 768, settings: { slidesToShow: 5 } },
+    //     { breakpoint: 480, settings: { slidesToShow: 3 } },
+    // ],
+
+
     dots: false,
     infinite: true,
     speed: 2000,
@@ -24,9 +38,12 @@ const sliderSettings = {
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
-        { breakpoint: 1024, settings: { slidesToShow: 6 } },
-        { breakpoint: 768, settings: { slidesToShow: 5 } },
-        { breakpoint: 480, settings: { slidesToShow: 3 } },
+        { breakpoint: 1280, settings: { slidesToShow: 6 } },
+        { breakpoint: 1024, settings: { slidesToShow: 5 } },
+        { breakpoint: 768, settings: { slidesToShow: 4 } },
+        { breakpoint: 640, settings: { slidesToShow: 3 } },
+        { breakpoint: 480, settings: { slidesToShow: 2 } },
+        { breakpoint: 360, settings: { slidesToShow: 1 } },
     ],
 };
 
@@ -60,18 +77,6 @@ const Clients = () => {
 
                 {/* Logos */}
                 <div className="client-logo-wrap mt-10 relative z-20">
-                    {/*<ul className="flex flex-wrap justify-center gap-6 sm:gap-8">*/}
-                    {/*    {clientLogos.map((logo, index) => (*/}
-                    {/*        <li key={index}>*/}
-                    {/*            <img*/}
-                    {/*                src={`/clients/${logo}`}*/}
-                    {/*                alt={`client logo ${index + 1}`}*/}
-                    {/*                className="client-img"*/}
-                    {/*            />*/}
-                    {/*        </li>*/}
-                    {/*    ))}*/}
-                    {/*</ul>*/}
-
                     <Slider {...sliderSettings}>
                         {clientLogos.map((logo, index) => (
                             <div key={index} className="text-center px-2">

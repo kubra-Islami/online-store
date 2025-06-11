@@ -165,27 +165,28 @@ export default function SalesProductList() {
             </div>
             <ColoredLine color="#E0E0E0" style={{paddingBottom: "2rem"}}/>
             {/* Responsive Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10" style={{padding:'1rem'}}>
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10" >
                 <div className="lg:col-span-1 p-4">
                 {/* sales img */}
-                <div className="flex flex-col items-center justify-center text-center lg:items-start lg:justify-start">
+                <div className="flex lg:flex-col sm:flex-row items-center justify-center text-center lg:items-start lg:justify-start">
+                    <h3 className="sales-title text-3xl font-bold">Marketly sales</h3>
                     <img
                         alt="sales img"
                         src={"/products/sales-img.svg"}
                         className="mt-4 lg:w-full sm:w-fit"
                     />
 
-                    <h3 className="sales-title text-3xl font-bold">Marketly sales</h3>
+
                 </div>
                 {/* Countdown */}
                 <div
                     id="countdown"
-                    className="mt-6 flex items-center justify-center gap-2 text-center font-bold"
+                    className="mt-6 flex items-center justify-center text-center font-bold"
                 >
-                    <div className="simply-section simply-days-section w-24 sm:w-28 md:w-32 border rounded-lg p-2 bg-white shadow">
+                    <div className="simply-section simply-days-section border rounded-lg p-2 bg-white shadow">
                         <div>
                             <span className="simply-amount text-2xl block text-orange-600">{countdown.days}</span>
-                            <span className="simply-word text-sm" style={{padding: "8px"}}>Days</span>
+                            <span className="simply-word text-sm" style={{padding: "3px"}}>Days</span>
                         </div>
                     </div>
 
@@ -194,7 +195,7 @@ export default function SalesProductList() {
                     <div className="simply-section simply-hours-section w-24 sm:w-28 md:w-32 border rounded-lg p-2 bg-white shadow">
                         <div>
                             <span className="simply-amount text-2xl block text-orange-600">{countdown.hours}</span>
-                            <span className="simply-word text-sm" style={{padding: "8px"}}>Hours</span>
+                            <span className="simply-word text-sm" style={{padding: "3px"}}>Hours</span>
                         </div>
                     </div>
 
@@ -205,7 +206,7 @@ export default function SalesProductList() {
                         <div>
                                 <span
                                     className="simply-amount text-2xl block text-orange-600">{countdown.minutes}</span>
-                            <span className="simply-word text-sm" style={{padding: "8px"}}>Minutes</span>
+                            <span className="simply-word text-sm" style={{padding: "3px"}}>Minutes</span>
                         </div>
                     </div>
 
@@ -216,7 +217,7 @@ export default function SalesProductList() {
                         <div>
                                 <span
                                     className="simply-amount text-2xl block text-orange-600">{countdown.seconds}</span>
-                            <span className="simply-word text-sm" style={{padding: "8px"}}>Seconds</span>
+                            <span className="simply-word text-sm" style={{padding: "3px"}}>Seconds</span>
                         </div>
                     </div>
                 </div>
