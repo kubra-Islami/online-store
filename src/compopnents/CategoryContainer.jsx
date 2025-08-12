@@ -57,7 +57,6 @@ function CategoryContainer() {
         <div className="container my-16 px-6 relative"
              style={{marginTop: "60px", padding: "60px"}}>
 
-            {/* ✅ Arrows OUTSIDE of the slider */}
             <ArrowBackIosNewIcon
                 className={`absolute left-2 top-1/2 transform -translate-y-1/2 border border-gray-300 px-3 py-2 shadow z-10 cursor-pointer rounded-md ${
                     currentSlide === 0
@@ -78,9 +77,9 @@ function CategoryContainer() {
                 onClick={currentSlide === totalSlides - 1 ? null : handleNext}
             />
 
-            {/* ✅ Slider itself */}
+
             <div ref={sliderRef} className="keen-slider">
-                <CategoryItem categories={categories}/>
+                <CategoryItem categories={categories} />
             </div>
         </div>
 

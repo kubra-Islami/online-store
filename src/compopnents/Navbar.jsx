@@ -11,7 +11,7 @@ const navigation = [
     {name: 'Best Sellers', to: 'Best-sellers'},
     {name: 'Sales ', to: 'Sales '},
     {name: 'Categories', href: 'categories'},
-    {name: 'login / register', to: 'login'},
+    {name: 'login', to: 'login'},
 ]
 const Navbar = ({isScrolled}) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

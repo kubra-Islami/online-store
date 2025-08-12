@@ -89,7 +89,7 @@ const Login = () => {
                                 <span className="text-gray-500">Not registered?</span>
                                 {/*<a href="sign-up.html" className=" hover:underline ml-1">*/}
                                 <Link to="/signup" className="text-gray-500 hover:underline ml-1">
-                                    Create account
+                                    Create New account
                                 </Link>
                             </div>
                         </div>

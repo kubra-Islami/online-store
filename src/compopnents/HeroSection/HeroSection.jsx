@@ -69,54 +69,7 @@ function HeroSection() {
                     </div>
                 </div>
             </div>
-
-
-            {/* Floating shapes */
-            }
-            {/*<img*/
-            }
-            {/*    src="/hero-section/cta-2-path-shape.png"*/
-            }
-            {/*    alt="group shape"*/
-            }
-            {/*    className="absolute top-60 left-60 w-10 md:w-10 z-10"*/
-            }
-            {/*/>*/
-            }
-            {/*<img*/
-            }
-            {/*    src="/hero-section/cta-2-circle-shape.png"*/
-            }
-            {/*    alt="group shape"*/
-            }
-            {/*    className="absolute top-20 left-50 w-10 z-10"*/
-            }
-            {/*/>*/
-            }
-            {/*<img*/
-            }
-            {/*    src="/hero-section/cta-2-tringle-shape.png"*/
-            }
-            {/*    alt="group shape"*/
-            }
-            {/*    className="absolute top-1/2 left-60 w-16 z-10"*/
-            }
-            {/*/>*/
-            }
-            {/*<img*/
-            }
-            {/*    src="/hero-section/cta-2-tringle-shape.png"*/
-            }
-            {/*    alt="group shape"*/
-            }
-            {/*    className="absolute bottom-0 left-1/4 w-16 z-10"*/
-            }
-            {/*/>*/
-            }
-
         </div>
-
-
     );
 }
 

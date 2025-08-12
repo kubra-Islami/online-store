@@ -1,10 +1,8 @@
-'use client'
-
 import React,{useEffect,useState} from 'react'
 import Navbar from "../compopnents/Navbar.jsx";
 import {useLocation} from "react-router-dom";
 
-export default function Example() {
+const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
     const isHome = location.pathname === '/';
@@ -34,3 +32,5 @@ export default function Example() {
 
     )
 }
+
+export default Header;
