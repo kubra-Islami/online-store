@@ -1,12 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 import { Container } from "@mui/material";
 import {TiMail, TiLockClosed, TiUser} from "react-icons/ti";
 import {Link} from "react-router-dom";
-
-
+// import swal from "sweetalert";
 import "./SignUp.css";
-const SignUp = () => {
 
+
+const SignUp = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    // const registerHandler = (e) => {
+    //     e.preventDefault();
+    //     if (name.length < 8 ) {
+    //         swal({
+    //             title: "name is not correct",
+    //             text: "name should contain at least 8 characters",
+    //             icon: "error",
+    //             button:"got it !"
+    //         });
+    //     }
+    //     // swal({
+    //     //     title: "name is not correct",
+    //     //     text: "name should contain at least 8 characters",
+    //     //     icon: "error",
+    //     //     dangerMode: true,
+    //     // })
+    //     //     .then(willDelete => {
+    //     //         if (willDelete) {
+    //     //             swal("Deleted!", "Your imaginary file has been deleted!", "success");
+    //     //         }
+    //     //     });
+    // }
     return (
         <section className="min-h-screen bg-gradient-to-br py-24 hero-bg-2 ptb-100 full-screen">
             <Container maxWidth="lg" className="px-4">
@@ -44,6 +70,8 @@ const SignUp = () => {
                                               <TiUser size={30}/>
                                             </span>
                                         <input
+                                            value={name}
+                                            onChange={(e) => setName(e.target.value)}
                                             type="text"
                                             className="w-full pl-12 pr-3 py-2 border border-gray-300 rounded-md form-control text-sm text-gray-700 bg-transparent outline-none placeholder-gray-400"
                                             placeholder="Enter your name"
@@ -58,6 +86,8 @@ const SignUp = () => {
                                               <TiMail size={30}/>
                                             </span>
                                         <input
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
                                             type="email"
                                             className="w-full pl-12 pr-3 py-2 border border-gray-300 rounded-md form-control text-sm text-gray-700 bg-transparent outline-none placeholder-gray-400"
                                             placeholder="name@yourdomain.com"
@@ -80,6 +110,8 @@ const SignUp = () => {
                                               <TiLockClosed size={30}/>
                                             </span>
                                         <input
+                                            value={password}
+                                            onChange={(e) => setPassword(e.target.value)}
                                             type="password"
                                             className="w-full pl-12 pr-3 py-2 border border-gray-300 rounded-md form-control text-sm text-gray-700 bg-transparent outline-none placeholder-gray-400"
                                             placeholder="Enter your password"
@@ -103,6 +135,7 @@ const SignUp = () => {
 
                                     {/* Submit */}
                                     <button
+                                        // onClick={(e)=>registerHandler(e)}
                                         type="submit"
                                         className="w-full  text-white font-semibold py-2 rounded-md transition-colors duration-300 sign-in"
                                     >
@@ -114,7 +147,6 @@ const SignUp = () => {
                             {/* Bottom Link */}
                             <div className="border-t px-6 py-4 bg-transparent text-sm create-account">
                                 <span className="text-gray-500">Already have an account?</span>
-                                {/*<a href="sign-up.html" className=" hover:underline ml-1">*/}
                                 <Link to="/login" className=" hover:underline ">
                                     Sign in
                                 </Link>

@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import Navbar from "../compopnents/Navbar.jsx";
 import {useLocation} from "react-router-dom";
 
-const Header = () => {
+const Header = ({cart}) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
     const isHome = location.pathname === '/';
@@ -26,7 +26,7 @@ const Header = () => {
     return (
         <div className=''>
             <header className={`absolute w-full z-50  ${isHome ? 'home-header' : 'other-header'}`}>
-                <Navbar isScrolled={isScrolled}/>
+                <Navbar isScrolled={isScrolled} cart={cart}/>
             </header>
         </div>
 

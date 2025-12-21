@@ -7,6 +7,9 @@ import SignUp from "./pages/SignUp/SignUp.jsx";
 import Home from "./pages/Home.jsx";
 import NotFoundPage from "./pages/NotFound/NotFoundPage.jsx";
 import {FaArrowUp} from "react-icons/fa";
+import { Toaster } from "react-hot-toast";
+
+
 const ScrollToTopButton = ({ isVisible }) => (
     <button
         className={`scroll-top scroll-to-target ${isVisible ? "open" : ""}`}
@@ -15,13 +18,13 @@ const ScrollToTopButton = ({ isVisible }) => (
         <FaArrowUp size={20} color="white" />
     </button>
 );
-// 👇 Hook that listens to route changes
+
 const useRouteChangeLoader = () => {
     const location = useLocation();
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setLoading(true); // start loader on route change
+        setLoading(true);
         const timeout = setTimeout(() => setLoading(false), 1000);
 
         return () => clearTimeout(timeout);
@@ -43,6 +46,11 @@ const AppRoutes = () => {
 
     return (
         <>
+            <Toaster position="top-center" toastOptions={{
+                duration: 2000,
+                position: "top-center",
+            }}/>
+
             {isLoading && <Preloader />}
 
             <Routes>

@@ -38,7 +38,7 @@
 .hero-bg-2::before {
     position: absolute;
     content: "";
-    background: url("../../../public/Login/login.jpg") no-repeat center bottom / cover;
+    background: url("./Login/login.jpg") no-repeat center bottom / cover;
     width: 100%;
     height: 100%;
     top: 0;

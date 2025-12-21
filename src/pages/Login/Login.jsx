@@ -1,10 +1,42 @@
-import React, { useEffect } from "react";
-import { Container } from "@mui/material";
-import { TiMail, TiLockClosed } from "react-icons/ti";
+import React, {useEffect, useId, useState} from "react";
+import {Container} from "@mui/material";
+import {TiMail, TiLockClosed} from "react-icons/ti";
 import {Link} from "react-router-dom";
-
+import toast from 'react-hot-toast';
+import loginSchema from "../../../validators/loginValidator.js";
 import "./Login.css";
+
+
 const Login = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    // const location = useLocation();
+
+
+    const loginHandler = (e) => {
+        e.preventDefault();
+        toast.loading("loading",{
+            duration: 2000,
+            position: "top-center",
+        })
+
+        const user = {email,password};
+        const result = loginSchema.safeParse(user);
+
+        setTimeout(()=>{
+            if (result.success) {
+                toast.success("Login was successful!");
+                setEmail("");
+                setPassword("");
+            }
+            return toast.error(result.error.issues[0].message)
+        },3000)
+
+
+    }
+
+
+    const id = useId();
     useEffect(() => {
         window.dispatchEvent(new Event("resize"));
     }, []);
@@ -39,14 +71,20 @@ const Login = () => {
                                 <form className="space-y-6 login-signup-form">
                                     {/* Email Field */}
                                     <div className="form-group relative">
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                                        <label htmlFor={`${id}-email`}
+                                               className="block text-sm font-medium text-gray-700 mb-1">
                                             Email Address
                                         </label>
-                                            <span className="input-icon">
-                                              <TiMail size={30} />
+                                        <span className="input-icon">
+                                              <TiMail size={30}/>
                                             </span>
                                         <input
+                                            id={`${id}-email`}
                                             type="email"
+                                            value={email}
+                                            onChange={(e) => {
+                                                setEmail(e.target.value)
+                                            }}
                                             className="w-full pl-12 pr-3 py-2 border border-gray-300 rounded-md form-control text-sm text-gray-700 bg-transparent outline-none placeholder-gray-400"
                                             placeholder="name@yourdomain.com"
                                         />
@@ -55,7 +93,8 @@ const Login = () => {
                                     {/* Password Field */}
                                     <div className="form-group relative">
                                         <div className="flex justify-between items-center mb-1">
-                                            <label className="text-sm font-medium text-gray-700">Password</label>
+                                            <label htmlFor={`${id}-password`}
+                                                   className="text-sm font-medium text-gray-700">Password</label>
                                             <a
                                                 // href="password-reset.html"
                                                 href="#"
@@ -64,10 +103,15 @@ const Login = () => {
                                                 Forgot password?
                                             </a>
                                         </div>
-                                            <span className="input-icon">
-                                              <TiLockClosed size={30} />
+                                        <span className="input-icon">
+                                              <TiLockClosed size={30}/>
                                             </span>
                                         <input
+                                            onChange={(e) => {
+                                                setPassword(e.target.value)
+                                            }}
+                                            value={password}
+                                            id={`${id}-password`}
                                             type="password"
                                             className="w-full pl-12 pr-3 py-2 border border-gray-300 rounded-md form-control text-sm text-gray-700 bg-transparent outline-none placeholder-gray-400"
                                             placeholder="Enter your password"
@@ -78,6 +122,7 @@ const Login = () => {
                                     <button
                                         type="submit"
                                         className="w-full  text-white font-semibold py-2 rounded-md transition-colors duration-300 log-in"
+                                        onClick={(e) => loginHandler(e)}
                                     >
                                         Sign in
                                     </button>

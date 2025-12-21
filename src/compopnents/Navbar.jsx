@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline/index.js";
-import {BiSearch} from "react-icons/bi";
+import { IoMdSearch } from "react-icons/io";
 
 import {Dialog, DialogPanel} from "@headlessui/react";
 import {BsCart2} from "react-icons/bs";
@@ -13,7 +13,7 @@ const navigation = [
     {name: 'Categories', href: 'categories'},
     {name: 'login', to: 'login'},
 ]
-const Navbar = ({isScrolled}) => {
+const Navbar = ({isScrolled, cart}) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
@@ -49,7 +49,9 @@ const Navbar = ({isScrolled}) => {
                                 <Link to="cart"
                                       className={`${isScrolled ? 'shop-header__action--cart--btn-scroll' : 'shop-header__action--cart--btn'}`}>
                                     <BsCart2 className="isax isax-shopping-cart"/>
-                                    <span id="mini-cart-count">0</span>
+                                    <span id="mini-cart-count">
+                                        {cart.length}
+                                    </span>
                                 </Link>
                             </div>
 
@@ -57,9 +59,9 @@ const Navbar = ({isScrolled}) => {
                                 className={`${mobileMenuOpen ? 'hidden' : 'relative group ml-5 h-10'}`}
                             >
                                 {/* Search Icon */}
-                                <BiSearch
-                                    className="absolute left-1 -translate-y-1/2 text-gray-500 w-5 h-5 z-10 cursor-pointer"
-                                    style={{cursor: "pointer", top: '21px'}}
+                                <IoMdSearch
+                                    className="absolute left-1 -translate-y-1/2 text-gray-500 z-10 cursor-pointer"
+                                    style={{cursor: "pointer", top: '21px',width:"25",height:"25"}}
                                 />
 
                                 {/* Input Field */}

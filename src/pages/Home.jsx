@@ -8,6 +8,7 @@ import Brands from "../compopnents/Brand/Brand.jsx";
 import Clients from "../compopnents/Clients/Clients.jsx";
 
 const Home = () => {
+
     return (
         <>
             <HeroSection className="section-spacing" />

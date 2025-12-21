@@ -7,17 +7,16 @@ import {Link} from "react-router-dom";
 import {FiArrowUpRight} from "react-icons/fi";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import Product from "../compopnents/Product.jsx";
 import ColoredLine from "../compopnents/ColoredLine.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
-const products = [
+const productsData = [
     {
         id: 1,
         name: 'Earthen Bottle',
         href: '#',
-        offered_price: '50',
-        old_price: '$80',
+        offered_price: '50000',
+        old_price: '48000',
         onsale: "4%",
         imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
         imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
@@ -26,8 +25,8 @@ const products = [
         id: 2,
         name: 'Nomad Tumbler',
         href: '#',
-        offered_price: '70',
-        old_price: '$100',
+        offered_price: '140000',
+        old_price: '100000',
         onsale: "5%",
         imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/10/O73VCN1.webp',
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
@@ -36,8 +35,8 @@ const products = [
         id: 3,
         name: 'Focus Paper Refill',
         href: '#',
-        offered_price: '80',
-        old_price: '$110',
+        offered_price: '80000',
+        old_price: '71000',
         onsale: "10%",
         imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/09/bicycle-1.jpg',
         imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
@@ -46,15 +45,28 @@ const products = [
         id: 4,
         name: 'Machined Mechanical Pencil',
         href: '#',
-        offered_price: '90',
-        old_price: '$120',
+        offered_price: '90000',
+        old_price: '8200',
         onsale: "5%",
         imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/10/O73VCN1.webp',
         imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
     },
-
+    {
+        id: 5,
+        name: 'Machined Mechanical Pencil 2',
+        href: '#',
+        offered_price: '250000',
+        old_price: '180000',
+        onsale: "10%",
+        imageSrc: 'https://tecnoshop.vakiljavangp.com/wp-content/uploads/2024/10/O73VCN1.webp',
+        imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
+    },
 ];
 export default function SalesProductList() {
+    const [products] =useState(productsData);
+    // const [cart, setCart] = useState([]);
+
+
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = products.length;
     const [countdown, setCountdown] = useState({
@@ -64,7 +76,7 @@ export default function SalesProductList() {
         seconds: 0
     });
 
-    const targetDate = new Date(2025, 5, 1, 16, 10, 0); // June 1, 2025, 16:10:00
+    const targetDate = new Date(2025, 12, 1, 16, 10, 0); // June 1, 2025, 16:10:00
 
     // Function to update the countdown
     const updateCountdown = () => {
@@ -121,9 +133,9 @@ export default function SalesProductList() {
     };
     return (
 
-        <div className="products-container container mx-auto px-6 best-seller-container section-spacing" >
+        <div className="products-container container mx-auto px-6 best-seller-container section-spacing">
             <div className="flex flex-col gap-4 ">
-                <div className="flex sm:flex-col lg:flex-row justify-between" >
+                <div className="flex sm:flex-col lg:flex-row justify-between">
                     <h2 className="text-3xl font-bold text-gray-800 title">
                         Sales
                     </h2>
@@ -165,76 +177,77 @@ export default function SalesProductList() {
             </div>
             <ColoredLine color="#E0E0E0" style={{paddingBottom: "2rem"}}/>
             {/* Responsive Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10" >
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10">
                 <div className="lg:col-span-1 p-4">
-                {/* sales img */}
-                <div className="flex lg:flex-col sm:flex-row items-center justify-center text-center lg:items-start lg:justify-start">
-                    <h3 className="sales-title text-3xl font-bold">Marketly sales</h3>
-                    <img
-                        alt="sales img"
-                        src={"/products/sales-img.svg"}
-                        className="mt-4 lg:w-full sm:w-fit"
-                    />
-
-
-                </div>
-                {/* Countdown */}
-                <div
-                    id="countdown"
-                    className="mt-6 flex items-center justify-center text-center font-bold"
-                >
-                    <div className="simply-section simply-days-section border rounded-lg p-2 bg-white shadow">
-                        <div>
-                            <span className="simply-amount text-2xl block text-orange-600">{countdown.days}</span>
-                            <span className="simply-word text-sm" style={{padding: "3px"}}>Days</span>
-                        </div>
-                    </div>
-
-                    <span className="text-2xl ">:</span>
-
-                    <div className="simply-section simply-hours-section w-24 sm:w-28 md:w-32 border rounded-lg p-2 bg-white shadow">
-                        <div>
-                            <span className="simply-amount text-2xl block text-orange-600">{countdown.hours}</span>
-                            <span className="simply-word text-sm" style={{padding: "3px"}}>Hours</span>
-                        </div>
-                    </div>
-
-                    <span className="text-2xl ">:</span>
-
+                    {/* sales img */}
                     <div
-                        className="simply-section simply-minutes-section w-24 sm:w-28 md:w-32 border rounded-lg p-2 bg-white shadow">
-                        <div>
+                        className="flex lg:flex-col sm:flex-row items-center justify-center text-center lg:items-start lg:justify-start">
+                        <h3 className="sales-title text-3xl font-bold">Marketly sales</h3>
+                        <img
+                            alt="sales img"
+                            src={"/products/sales-img.svg"}
+                            className="mt-4 lg:w-full sm:w-fit"
+                        />
+
+
+                    </div>
+                    {/* Countdown */}
+                    <div
+                        id="countdown"
+                        className="mt-6 flex items-center justify-center text-center font-bold"
+                    >
+                        <div className="simply-section simply-days-section border rounded-lg p-2 bg-white shadow">
+                            <div>
+                                <span className="simply-amount text-2xl block text-orange-600">{countdown.days}</span>
+                                <span className="simply-word text-sm" style={{padding: "3px"}}>Days</span>
+                            </div>
+                        </div>
+
+                        <span className="text-2xl ">:</span>
+
+                        <div
+                            className="simply-section simply-hours-section w-24 sm:w-28 md:w-32 border rounded-lg p-2 bg-white shadow">
+                            <div>
+                                <span className="simply-amount text-2xl block text-orange-600">{countdown.hours}</span>
+                                <span className="simply-word text-sm" style={{padding: "3px"}}>Hours</span>
+                            </div>
+                        </div>
+
+                        <span className="text-2xl ">:</span>
+
+                        <div
+                            className="simply-section simply-minutes-section w-24 sm:w-28 md:w-32 border rounded-lg p-2 bg-white shadow">
+                            <div>
                                 <span
                                     className="simply-amount text-2xl block text-orange-600">{countdown.minutes}</span>
-                            <span className="simply-word text-sm" style={{padding: "3px"}}>Minutes</span>
+                                <span className="simply-word text-sm" style={{padding: "3px"}}>Minutes</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <span className="text-2xl ">:</span>
+                        <span className="text-2xl ">:</span>
 
-                    <div
-                        className="simply-section simply-seconds-section w-24 sm:w-28 md:w-32 border rounded-lg p-2 bg-white shadow">
-                        <div>
+                        <div
+                            className="simply-section simply-seconds-section w-24 sm:w-28 md:w-32 border rounded-lg p-2 bg-white shadow">
+                            <div>
                                 <span
                                     className="simply-amount text-2xl block text-orange-600">{countdown.seconds}</span>
-                            <span className="simply-word text-sm" style={{padding: "3px"}}>Seconds</span>
+                                <span className="simply-word text-sm" style={{padding: "3px"}}>Seconds</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
-            <div
-                ref={sliderRef}
-                className="best-seller-slider keen-slider lg:col-span-3 mt-6 lg:mt-0 "
-            >
-                {products.map((product) => (
-                    <div key={product.id} className="keen-slider__slide">
-                        <ProductCard product={product}/>
-                    </div>
-                ))}
+                </div>
+                <div
+                    ref={sliderRef}
+                    className="best-seller-slider keen-slider lg:col-span-3 mt-6 lg:mt-0 "
+                >
+                    {products.map((product) => (
+                        <div key={product.id} className="keen-slider__slide">
+                            <ProductCard {...product}/>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
-</div>
-
-)
+    )
 }
